@@ -1,26 +1,157 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #eceded;
+  --foreground: #191c1e;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@theme {
+  --color-outline-variant: #c5c5d3;
+  --color-on-error-container: #410002;
+  --color-secondary: #505f76;
+  --color-primary-container: #1e3a8a;
+  --color-inverse-primary: #b6c4ff;
+  --color-on-tertiary: #ffffff;
+  --color-surface-dim: #d8dadc;
+  --color-on-tertiary-fixed-variant: #783200;
+  --color-on-primary-fixed-variant: #264191;
+  --color-on-surface-variant: #444651;
+  --color-secondary-fixed: #d3e4fe;
+  --color-surface: #eceded;
+  --color-on-primary-container: #90a8ff;
+  --color-tertiary: #4b1c00;
+  --color-surface-container-lowest: #ffffff;
+  --color-secondary-fixed-dim: #b7c8e1;
+  --color-tertiary-container: #6e2d00;
+  --color-background: #eceded;
+  --color-surface-container-highest: #e0e3e5;
+  --color-tertiary-fixed: #ffdbca;
+  --color-surface-container-high: #e6e8ea;
+  --color-on-secondary: #ffffff;
+  --color-primary-fixed-dim: #b6c4ff;
+  --color-surface-container: #eceef0;
+  --color-outline: #757682;
+  --color-tertiary-fixed-dim: #ffb690;
+  --color-surface-bright: #eceded;
+  --color-inverse-on-surface: #eff1f3;
+  --color-on-tertiary-container: #ff8f4f;
+  --color-on-secondary-fixed: #0b1c30;
+  --color-on-primary-fixed: #00164e;
+  --color-on-surface: #191c1e;
+  --color-on-background: #191c1e;
+  --color-on-secondary-container: #d9e3f9;
+  --color-on-[#0C0A0A]: #ffffff;
+  --color-error-container: #410002;
+  --color-inverse-surface: #2e3133;
+  --color-error: #ffb4ab;
+  --color-on-secondary-fixed-variant: #39475d;
+  --color-on-[#0f4c9c]: #ffffff;
+  --color-surface-container-low: #f1f4f6;
+  --color-on-error: #690005;
+  --color-primary-fixed: #dbe2ff;
+  --color-[#0f4c9c]: #0f4c9c;
+  --color-shadow: #000000;
+  --color-primary: #00236f;
+  --color-[#0C0A0A]: #0c0a0a;
+  --color-on-primary: #ffffff;
+  --color-secondary-container: #39475d;
+  --color-surface-variant: #444651;
+  --color-sc-rim: #757682;
+  --color-[#0f4c9c]-container: #1e3a8a;
+  --color-[#0C0A0A]-container: #191c1e;
+  --color-tertiary-fixed-open-container: #4b1c00;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --radius-DEFAULT: 0.125rem;
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.5rem;
+  --radius-full: 9999px;
+
+  --spacing-base: 4px;
+  --spacing-xs: 0.5rem;
+  --spacing-lg: 2.5rem;
+  --spacing-md: 1.5rem;
+  --spacing-margin-mobile: 16px;
+  --spacing-max-width: 1280px;
+  --spacing-xl: 4rem;
+  --spacing-gutter: 24px;
+  --spacing-sm: 1rem;
+  --spacing-margin-desktop: 48px;
+
+  --font-label-sm: "Inter", sans-serif;
+  --font-headline-md: "Inter", sans-serif;
+  --font-label-md: "Inter", sans-serif;
+  --font-display-lg: "Inter", sans-serif;
+  --font-headline-lg: "Inter", sans-serif;
+  --font-body-lg: "Inter", sans-serif;
+  --font-headline-lg-mobile: "Inter", sans-serif;
+  --font-body-md: "Inter", sans-serif;
+
+  --animate-bounce: bounce 1s infinite;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-background);
+  color: var(--color-on-background);
+  font-family: var(--font-body-md);
+}
+
+.hero-gradient {
+  background: linear-gradient(rgba(0, 35, 111, 0.7), rgba(0, 35, 111, 0.4));
+}
+
+.industrial-shadow {
+  box-shadow: 0px 4px 12px rgba(30, 58, 138, 0.08);
+}
+
+.btn-slide-up {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-slide-up::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  transform: translateY(100%);
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  z-index: -1;
+}
+
+.btn-slide-up:hover::before {
+  transform: translateY(0);
+}
+
+/* Responsive Carousel Slide Track */
+.carousel-track {
+  display: flex;
+  gap: 16px;
+  transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transform: translateX(calc(-1 * var(--carousel-index) * (100% + 16px)));
+}
+
+@media (min-width: 640px) {
+  .carousel-track {
+    transform: translateX(calc(-1 * var(--carousel-index) * (100% + 16px) / 2));
+  }
+}
+
+@media (min-width: 1024px) {
+  .carousel-track {
+    transform: translateX(calc(-1 * var(--carousel-index) * (100% + 16px) / 3));
+  }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
