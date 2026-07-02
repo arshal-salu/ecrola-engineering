@@ -355,35 +355,35 @@ ${formData.message}
           <span className="material-symbols-outlined">close</span>
         </button>
         <a
-          className="font-headline-lg text-primary"
+          className="text-2xl font-bold text-primary"
           href="/"
           onClick={() => setMobileMenuOpen(false)}
         >
           Home
         </a>
         <a
-          className="font-headline-lg text-secondary"
+          className="text-2xl font-bold text-secondary hover:text-primary transition-colors"
           href="/about"
           onClick={() => setMobileMenuOpen(false)}
         >
           About
         </a>
         <a
-          className="font-headline-lg text-secondary"
+          className="text-2xl font-bold text-secondary hover:text-primary transition-colors"
           href="/products"
           onClick={() => setMobileMenuOpen(false)}
         >
           Products
         </a>
         <a
-          className="font-headline-lg text-secondary"
+          className="text-2xl font-bold text-secondary hover:text-primary transition-colors"
           href="/gallery"
           onClick={() => setMobileMenuOpen(false)}
         >
           Gallery
         </a>
         <a
-          className="font-headline-lg text-secondary"
+          className="text-2xl font-bold text-secondary hover:text-primary transition-colors"
           href="/contact"
           onClick={() => setMobileMenuOpen(false)}
         >
@@ -421,9 +421,9 @@ ${formData.message}
               <span className="text-blue-500 text-sm font-semibold tracking-widest block uppercase">
                 ABOUT US
               </span>
-              <h2 className="font-bold text-[40px] leading-[50px] text-[#0C0A0A] uppercase mt-[5px] flex flex-col">
-                <span className="block whitespace-nowrap">EXCELLENCE IN EVERY</span>
-                <span className="block whitespace-nowrap">ENGINEERING PROJECT</span>
+              <h2 className="font-bold text-3xl sm:text-[40px] leading-tight sm:leading-[50px] text-[#0C0A0A] uppercase mt-[5px] flex flex-col">
+                <span className="block sm:whitespace-nowrap">EXCELLENCE IN EVERY</span>
+                <span className="block sm:whitespace-nowrap">ENGINEERING PROJECT</span>
               </h2>
               <p className="text-gray-500 mt-4 text-base leading-relaxed">
                 At Ecorola Engineering, we specialize in innovative lift solutions, custom machinery, and cutting-edge production facilities to transform spaces across commercial, industrial, and residential sectors.
@@ -719,7 +719,7 @@ ${formData.message}
         </div>
 
         {/* Right Side: 40% Width, Background Image */}
-        <div className="w-full lg:w-[40%] min-h-[350px] lg:min-h-full relative">
+        <div className="hidden lg:block lg:w-[40%] lg:min-h-full relative">
           <img
             src="https://th.bing.com/th/id/R.a4c7f55872c9f55a1bd8d81b7f97debc?rik=APR%2bbr%2fznI9cSA&riu=http%3a%2f%2fwww.level10.com.au%2fassets%2fclient%2fimages%2fbanner%2fbanner-level10.jpg&ehk=H1Gb60rAsP0%2f5oimqNtNAJJVKhq1rLdSoAdugcNSe%2bE%3d&risl=&pid=ImgRaw&r=0"
             alt="Latest Projects Excellence"

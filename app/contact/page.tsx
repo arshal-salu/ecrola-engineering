@@ -165,7 +165,7 @@ export default function ContactPage() {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 bg-surface z-[60] flex flex-col items-center justify-center gap-8 transition-transform duration-300 md:hidden ${
+        className={`fixed inset-0 bg-surface z-[60] flex flex-col items-center justify-center gap-8 transition-transform duration-300 lg:hidden ${
           mobileMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
         id="mobile-menu"
@@ -178,35 +178,35 @@ export default function ContactPage() {
           <X className="w-6 h-6 text-primary" />
         </button>
         <a
-          className="font-headline-lg text-secondary"
+          className="text-2xl font-bold text-secondary hover:text-primary transition-colors"
           href="/"
           onClick={() => setMobileMenuOpen(false)}
         >
           Home
         </a>
         <a
-          className="font-headline-lg text-secondary"
+          className="text-2xl font-bold text-secondary hover:text-primary transition-colors"
           href="/about"
           onClick={() => setMobileMenuOpen(false)}
         >
           About
         </a>
         <a
-          className="font-headline-lg text-secondary"
+          className="text-2xl font-bold text-secondary hover:text-primary transition-colors"
           href="/products"
           onClick={() => setMobileMenuOpen(false)}
         >
           Products
         </a>
         <a
-          className="font-headline-lg text-secondary"
+          className="text-2xl font-bold text-secondary hover:text-primary transition-colors"
           href="/gallery"
           onClick={() => setMobileMenuOpen(false)}
         >
           Gallery
         </a>
         <a
-          className="font-headline-lg text-primary"
+          className="text-2xl font-bold text-primary"
           href="/contact"
           onClick={() => setMobileMenuOpen(false)}
         >

@@ -101,20 +101,14 @@ export default function MajorProductsCarousel() {
           onMouseEnter={() => (isPaused.current = true)}
           onMouseLeave={() => (isPaused.current = false)}
         >
-          <motion.div
-            className="flex gap-4"
-            animate={{
-              x: `calc(-${currentIndex} * (100% / 1 + 1rem / 1))`,
-            }}
-            transition={
-              isTransitioning
-                ? { duration: 0.5, ease: "easeInOut" }
-                : { duration: 0 }
-            }
+          <div
+            className="carousel-track"
             style={{
-              // Responsive transform fallback
-              transform: `translateX(calc(-${currentIndex} * (100% / 1)))`,
-            }}
+              "--carousel-index": currentIndex,
+              transition: isTransitioning
+                ? "transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1)"
+                : "none",
+            } as React.CSSProperties}
           >
             {products.map((product) => (
               <div
@@ -138,7 +132,7 @@ export default function MajorProductsCarousel() {
                 </h3>
               </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

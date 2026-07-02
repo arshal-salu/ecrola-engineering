@@ -136,7 +136,7 @@ export default function AboutPage() {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 bg-surface z-[60] flex flex-col items-center justify-center gap-8 transition-transform duration-300 md:hidden ${
+        className={`fixed inset-0 bg-surface z-[60] flex flex-col items-center justify-center gap-8 transition-transform duration-300 lg:hidden ${
           mobileMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
         id="mobile-menu"
@@ -149,35 +149,35 @@ export default function AboutPage() {
           <span className="material-symbols-outlined">close</span>
         </button>
         <a
-          className="font-headline-lg text-primary"
+          className="text-2xl font-bold text-secondary hover:text-primary transition-colors"
           href="/"
           onClick={() => setMobileMenuOpen(false)}
         >
           Home
         </a>
         <a
-          className="font-headline-lg text-secondary"
+          className="text-2xl font-bold text-primary"
           href="/about"
           onClick={() => setMobileMenuOpen(false)}
         >
           About
         </a>
         <a
-          className="font-headline-lg text-secondary"
+          className="text-2xl font-bold text-secondary hover:text-primary transition-colors"
           href="/products"
           onClick={() => setMobileMenuOpen(false)}
         >
           Products
         </a>
         <a
-          className="font-headline-lg text-secondary"
+          className="text-2xl font-bold text-secondary hover:text-primary transition-colors"
           href="/gallery"
           onClick={() => setMobileMenuOpen(false)}
         >
           Gallery
         </a>
         <a
-          className="font-headline-lg text-secondary"
+          className="text-2xl font-bold text-secondary hover:text-primary transition-colors"
           href="/contact"
           onClick={() => setMobileMenuOpen(false)}
         >
@@ -259,13 +259,7 @@ export default function AboutPage() {
                     LIFT & MACHINERY EXPERTS
                   </span>
                   <h2 
-                    style={{
-                      fontWeight: 600,
-                      fontSize: "48px",
-                      lineHeight: "58px",
-                      color: "#0C0A0A",
-                      marginTop: "12px"
-                    }}
+                    className="font-semibold text-3xl sm:text-[48px] leading-tight sm:leading-[58px] text-[#0C0A0A] mt-3"
                   >
                     Innovative Solutions<br />
                     for Modern<br />
@@ -445,13 +439,7 @@ export default function AboutPage() {
                 our service
               </h1>
               <h2 
-                style={{
-                  fontWeight: 600,
-                  fontSize: "48px",
-                  lineHeight: "60px",
-                  color: "#0C0A0A"
-                }}
-                className="mt-2"
+                className="font-semibold text-3xl sm:text-[48px] leading-tight sm:leading-[60px] text-[#0C0A0A] mt-2"
               >
                 What We Offer
               </h2>
