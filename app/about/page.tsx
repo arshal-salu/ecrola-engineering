@@ -21,7 +21,7 @@ function StatCounter({ target, duration = 2 }: { target: number; duration?: numb
       if (!startTimestamp) startTimestamp = timestamp;
       const progress = Math.min((timestamp - startTimestamp) / (duration * 1000), 1);
       setCount(Math.floor(progress * target));
-      
+
       if (progress < 1) {
         animationFrameId = requestAnimationFrame(step);
       } else {
@@ -76,7 +76,7 @@ export default function AboutPage() {
         <div className="w-full flex justify-between items-center h-16 px-6 sm:px-10 md:px-12 lg:px-16 xl:px-20">
           {/* Logo */}
           <a className="flex items-center gap-2" href="/">
-            <img src="https://ecrolaengineering.com/assets/images/logo/01.svg" alt="Ecrola Engineering Logo" className="h-9 sm:h-10 w-auto" />
+            <img src="/images/logo/01.svg" alt="Ecrola Engineering Logo" className="h-9 sm:h-10 w-auto" />
           </a>
 
           {/* Desktop Nav */}
@@ -136,9 +136,8 @@ export default function AboutPage() {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 bg-surface z-[60] flex flex-col items-center justify-center gap-8 transition-transform duration-300 lg:hidden ${
-          mobileMenuOpen ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`fixed inset-0 bg-surface z-[60] flex flex-col items-center justify-center gap-8 transition-transform duration-300 lg:hidden ${mobileMenuOpen ? "translate-x-0" : "translate-x-full"
+          }`}
         id="mobile-menu"
       >
         <button
@@ -195,7 +194,7 @@ export default function AboutPage() {
       {/* Main Content Area */}
       <main className="pt-20">
         {/* Banner Section */}
-        <section className="relative h-[400px] md:h-[500px] bg-[#0A0A0A] flex items-center justify-center overflow-hidden">
+        <section className="relative h-[250px] sm:h-[350px] md:h-[450px] bg-[#0A0A0A] flex items-center justify-center overflow-hidden">
           <img
             src="https://static.vecteezy.com/system/resources/thumbnails/072/909/642/small/modern-elevator-with-wooden-panels-and-lights-free-photo.jpeg"
             alt="About Us Banner"
@@ -203,7 +202,7 @@ export default function AboutPage() {
           />
           <div className="absolute inset-0 bg-black/40" />
           <div className="relative text-center z-10 px-4">
-            <h1 className="text-5xl md:text-7xl font-extrabold uppercase text-white tracking-wider mb-4 drop-shadow-lg">
+            <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-7xl font-extrabold uppercase text-white tracking-wider mb-4 drop-shadow-lg animate-fade-in">
               About Us
             </h1>
             <div className="flex items-center justify-center gap-2 text-sm md:text-base font-semibold text-slate-300 uppercase tracking-widest">
@@ -219,12 +218,12 @@ export default function AboutPage() {
         {/* Overview Section */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-6 md:px-20">
-             <div className="flex flex-col lg:flex-row gap-12 items-start">
+            <div className="flex flex-col lg:flex-row gap-12 items-start">
               {/* Left Column: 40% Width Image & Button */}
               <div className="w-full lg:w-[40%] flex flex-col gap-6">
                 <div className="rounded-lg overflow-hidden shadow-2xl">
                   <img
-                    src="https://ecrolaengineering.com/assets/images/about/04.jpg"
+                    src="/images/04.jpg"
                     alt="Lift & Machinery Experts"
                     className="w-full h-auto object-cover"
                     loading="lazy"
@@ -244,7 +243,7 @@ export default function AboutPage() {
               {/* Right Column: 60% Width Content */}
               <div className="w-full lg:w-[60%] space-y-6">
                 <div>
-                  <span 
+                  <span
                     style={{
                       fontWeight: 600,
                       fontSize: "16px",
@@ -258,16 +257,16 @@ export default function AboutPage() {
                   >
                     LIFT & MACHINERY EXPERTS
                   </span>
-                  <h2 
-                    className="font-semibold text-3xl sm:text-[48px] leading-tight sm:leading-[58px] text-[#0C0A0A] mt-3"
+                  <h2
+                    className="font-semibold text-2xl sm:text-3xl md:text-[48px] leading-tight md:leading-[58px] text-[#0C0A0A] mt-3"
                   >
-                    Innovative Solutions<br />
-                    for Modern<br />
+                    Innovative Solutions <br className="hidden sm:inline" />
+                    for Modern <br className="hidden sm:inline" />
                     Lifts & Machinery.
                   </h2>
                 </div>
 
-                <p 
+                <p
                   style={{
                     fontSize: "var(--font-size-b2)",
                     lineHeight: "var(--line-height-b2)",
@@ -291,7 +290,7 @@ export default function AboutPage() {
                       <div className="w-6 h-6 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0 mt-0.5">
                         <Check className="w-3.5 h-3.5 text-blue-600" />
                       </div>
-                      <span 
+                      <span
                         style={{
                           marginBottom: 0,
                           fontWeight: 600,
@@ -316,7 +315,7 @@ export default function AboutPage() {
           <div className="max-w-7xl mx-auto px-6 md:px-20 relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               {/* Left Column: 50% Width Image Container */}
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -331,7 +330,7 @@ export default function AboutPage() {
                 />
                 {/* Diagonal stripes and gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-transparent" />
-                <div 
+                <div
                   className="absolute inset-0 opacity-15 pointer-events-none"
                   style={{
                     backgroundImage: 'repeating-linear-gradient(45deg, #ffffff, #ffffff 10px, transparent 10px, transparent 20px)'
@@ -351,7 +350,7 @@ export default function AboutPage() {
                 </div>
 
                 {/* Features Grid */}
-                <motion.div 
+                <motion.div
                   variants={{
                     hidden: { opacity: 0 },
                     show: {
@@ -401,15 +400,14 @@ export default function AboutPage() {
                           show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
                         }}
                         key={idx}
-                        className={`aspect-square flex flex-col items-center justify-center text-center p-4 rounded-lg transition-all duration-300 cursor-pointer ${
-                          isActive 
-                            ? 'bg-blue-600 border-blue-600 shadow-xl scale-[1.03]' 
+                        className={`aspect-square flex flex-col items-center justify-center text-center p-4 rounded-lg transition-all duration-300 cursor-pointer ${isActive
+                            ? 'bg-blue-600 border-blue-600 shadow-xl scale-[1.03]'
                             : 'bg-transparent border border-gray-700 hover:border-blue-500'
-                        }`}
+                          }`}
                         onMouseEnter={() => setActiveCard(idx)}
                       >
-                        <IconComponent className="w-12 h-12 text-white mb-4" />
-                        <h3 className="text-white text-sm font-semibold leading-snug">
+                        <IconComponent className="w-8 h-8 md:w-12 md:h-12 text-white mb-3 md:mb-4" />
+                        <h3 className="text-white text-xs md:text-sm font-semibold leading-snug">
                           {feat.title}
                         </h3>
                       </motion.div>
@@ -426,7 +424,7 @@ export default function AboutPage() {
           <div className="max-w-7xl mx-auto px-6 md:px-20 relative z-10">
             {/* Headers */}
             <div className="mb-12">
-              <h1 
+              <h1
                 style={{
                   fontWeight: 400,
                   fontSize: "16px",
@@ -438,7 +436,7 @@ export default function AboutPage() {
               >
                 our service
               </h1>
-              <h2 
+              <h2
                 className="font-semibold text-3xl sm:text-[48px] leading-tight sm:leading-[60px] text-[#0C0A0A] mt-2"
               >
                 What We Offer
@@ -450,22 +448,22 @@ export default function AboutPage() {
               {[
                 {
                   title: "Safe Lockers",
-                  image: "https://ecrolaengineering.com/assets/images/service/16.jpg",
+                  image: "/images/12.jpg",
                   desc: "Protect your valuables with Ecoral’s safe lockers—secure, stylish, and built to safeguard what matters."
                 },
                 {
                   title: "EOT Crane Solutions",
-                  image: "https://ecrolaengineering.com/assets/images/project/11.jpg",
+                  image: "/images/11.jpg",
                   desc: "Efficient and reliable cranes for material handling and heavy-duty operations."
                 },
                 {
                   title: "Customized Home Elevator",
-                  image: "https://ecrolaengineering.com/assets/images/project/03.jpg",
+                  image: "/images/03 (1).jpg",
                   desc: "Bespoke home lift systems blending innovation, safety, and personalized design."
                 }
               ].map((service, idx) => (
-                <div 
-                  key={idx} 
+                <div
+                  key={idx}
                   className="group relative overflow-hidden rounded-lg shadow-lg aspect-[4/5] cursor-pointer"
                 >
                   {/* Background Image */}
@@ -477,7 +475,7 @@ export default function AboutPage() {
                   />
                   {/* Default subtle bottom dark gradient overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent transition-opacity duration-300 group-hover:opacity-0" />
-                  
+
                   {/* Default Title */}
                   <div className="absolute bottom-6 left-6 right-6 transition-all duration-300 group-hover:opacity-0 group-hover:translate-y-4">
                     <h3 className="text-2xl font-bold text-white uppercase tracking-wide">
@@ -559,7 +557,7 @@ export default function AboutPage() {
           {/* Column 1: Logo & Tagline */}
           <div className="space-y-6">
             <a className="flex items-center gap-2" href="#">
-              <img src="https://ecrolaengineering.com/assets/images/logo/02.png" alt="Ecrola Engineering Logo" className="h-12 w-auto" />
+              <img src="/images/logo/02.png" alt="Ecrola Engineering Logo" className="h-12 w-auto" />
             </a>
             <p className="text-slate-400 text-sm leading-relaxed mt-4">
               Pioneering mechanical engineering solutions with cutting-edge technology and unmatched precision.
@@ -587,7 +585,7 @@ export default function AboutPage() {
               </a>
             </div>
           </div>
-          
+
           {/* Column 2: Quick Links */}
           <div>
             <h4 className="font-bold text-white text-lg uppercase tracking-wider mb-6">
@@ -626,7 +624,7 @@ export default function AboutPage() {
               </li>
             </ul>
           </div>
-          
+
           {/* Column 3: Our Products */}
           <div>
             <h4 className="font-bold text-white text-lg uppercase tracking-wider mb-6">
@@ -659,7 +657,7 @@ export default function AboutPage() {
               </li>
             </ul>
           </div>
-          
+
           {/* Column 4: Contact Info */}
           <div className="space-y-6">
             <h4 className="font-bold text-white text-lg uppercase tracking-wider mb-6">
@@ -700,7 +698,7 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-        
+
         {/* Bottom bar */}
         <div className="border-t border-zinc-900 bg-black/40 py-8">
           <div className="max-w-7xl mx-auto px-6 md:px-20 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500 gap-4">

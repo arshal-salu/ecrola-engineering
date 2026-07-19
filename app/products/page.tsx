@@ -11,23 +11,23 @@ interface ProductItem {
 }
 
 const PRODUCTS_DATA: ProductItem[] = [
-  { 
-    name: "Home Elevator / Lift", 
+  {
+    name: "Home Elevator / Lift",
     image: "https://ecrolaengineering.com/assets/images/project/03.jpg",
     description: "Bespoke home lift systems blending innovation, safety, and personalized design to elevate modern living."
   },
-  { 
-    name: "Advanced Customized Machinery", 
+  {
+    name: "Advanced Customized Machinery",
     image: "https://ecrolaengineering.com/assets/images/project/13.jpg",
     description: "Tailored industrial machinery solutions engineered for optimal performance, durability, and customized workflows."
   },
-  { 
-    name: "EOT Crane Solutions", 
+  {
+    name: "EOT Crane Solutions",
     image: "https://ecrolaengineering.com/assets/images/project/11.jpg",
     description: "Efficient and reliable overhead traveling cranes designed for heavy-duty material handling and warehouse operations."
   },
-  { 
-    name: "Safe Lockers", 
+  {
+    name: "Safe Lockers",
     image: "https://ecrolaengineering.com/assets/images/project/12.jpg",
     description: "State-of-the-art secure safe lockers built with robust materials to protect your assets and valuables."
   },
@@ -65,7 +65,7 @@ export default function ProductsPage() {
         <div className="w-full flex justify-between items-center h-16 px-6 sm:px-10 md:px-12 lg:px-16 xl:px-20">
           {/* Logo */}
           <a className="flex items-center gap-2" href="/">
-            <img src="https://ecrolaengineering.com/assets/images/logo/01.svg" alt="Ecrola Engineering Logo" className="h-9 sm:h-10 w-auto" />
+            <img src="/images/logo/01.svg" alt="Ecrola Engineering Logo" className="h-9 sm:h-10 w-auto" />
           </a>
 
           {/* Desktop Nav */}
@@ -125,9 +125,8 @@ export default function ProductsPage() {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 bg-surface z-[60] flex flex-col items-center justify-center gap-8 transition-transform duration-300 lg:hidden ${
-          mobileMenuOpen ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`fixed inset-0 bg-surface z-[60] flex flex-col items-center justify-center gap-8 transition-transform duration-300 lg:hidden ${mobileMenuOpen ? "translate-x-0" : "translate-x-full"
+          }`}
         id="mobile-menu"
       >
         <button
@@ -184,7 +183,7 @@ export default function ProductsPage() {
       {/* Main Content Area */}
       <main className="pt-20">
         {/* Banner Section */}
-        <section className="relative h-[400px] md:h-[500px] bg-[#0A0A0A] flex items-center justify-center overflow-hidden">
+        <section className="relative h-[250px] sm:h-[350px] md:h-[450px] bg-[#0A0A0A] flex items-center justify-center overflow-hidden">
           <img
             src="https://static.vecteezy.com/system/resources/thumbnails/072/909/642/small/modern-elevator-with-wooden-panels-and-lights-free-photo.jpeg"
             alt="Products Banner"
@@ -192,7 +191,7 @@ export default function ProductsPage() {
           />
           <div className="absolute inset-0 bg-black/40" />
           <div className="relative text-center z-10 px-4">
-            <h1 className="text-5xl md:text-7xl font-extrabold uppercase text-white tracking-wider mb-4 drop-shadow-lg animate-fade-in">
+            <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-7xl font-extrabold uppercase text-white tracking-wider mb-4 drop-shadow-lg animate-fade-in">
               PRODUCTS
             </h1>
             <div className="flex items-center justify-center gap-2 text-sm md:text-base font-semibold text-slate-300 uppercase tracking-widest">
@@ -220,11 +219,11 @@ export default function ProductsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[0, 1, 2, 3, 4].map((index) => {
                 const projectImages = [
-                  "https://ecrolaengineering.com/assets/images/project/01.jpg",
-                  "https://ecrolaengineering.com/assets/images/project/02.jpg",
-                  "https://ecrolaengineering.com/assets/images/project/03.jpg",
-                  "https://ecrolaengineering.com/assets/images/service/09.jpg",
-                  "https://ecrolaengineering.com/assets/images/service/16.jpg"
+                  "/images/01 (1).jpg",
+                  "/images/02.jpg",
+                  "/images/03 (1).jpg",
+                  "/images/11.jpg",
+                  "/images/12.jpg"
                 ];
                 const projectNames = [
                   "Innovative Lift Systems",
@@ -285,10 +284,10 @@ export default function ProductsPage() {
         </section>
 
         {/* Global Services Section */}
-        <section className="bg-gray-50 pt-0 pb-28 px-8 md:px-24 overflow-hidden">
-          <div className="max-w-7xl mx-auto bg-white p-10 md:p-16 rounded-2xl shadow-sm border border-gray-100">
+        <section className="bg-gray-50 pt-0 pb-28 px-4 sm:px-8">
+            <div className="max-w-7xl mx-auto bg-white p-6 sm:p-10 md:p-16 rounded-2xl shadow-sm border border-gray-100">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-              
+
               <div className="flex flex-col">
                 {/* Header */}
                 <div className="flex flex-col mb-10">
@@ -339,7 +338,7 @@ export default function ProductsPage() {
                           <div className="absolute left-0 top-1.5 flex items-center justify-center w-[16px] h-[16px]">
                             {/* Inactive Dot */}
                             <div className="w-4 h-4 border-2 border-orange-500 rounded-full bg-white transition-colors group-hover:border-orange-600" />
-                            
+
                             {/* Active Dot with layoutId for smooth transition */}
                             {isActive && (
                               <motion.div
@@ -355,7 +354,7 @@ export default function ProductsPage() {
                             <h4 className={`text-lg md:text-xl font-bold transition-colors duration-200 ${isActive ? 'text-blue-600' : 'text-gray-900 group-hover:text-gray-700'}`}>
                               {item.title}
                             </h4>
-                            
+
                             <AnimatePresence initial={false}>
                               {isActive && (
                                 <motion.div
@@ -373,16 +372,16 @@ export default function ProductsPage() {
                             </AnimatePresence>
                           </div>
                         </div>
-                    );
-                  })}
-                </div>
+                      );
+                    })}
+                  </div>
                 </div>
               </div>
 
               {/* Right Column: Image container */}
-              <div className="rounded-lg overflow-hidden h-[620px] relative shadow-lg">
+              <div className="rounded-lg overflow-hidden h-[300px] sm:h-[450px] md:h-[620px] relative shadow-lg">
                 <img
-                  src="https://jagannathsafety.com/wp-content/uploads/2024/07/H-services1.jpg"
+                  src="/images/H-services1.jpg"
                   alt="Global Services"
                   className="w-full h-full object-cover"
                 />
@@ -399,7 +398,7 @@ export default function ProductsPage() {
           {/* Column 1: Logo & Tagline */}
           <div className="space-y-6">
             <a className="flex items-center gap-2" href="#">
-              <img src="https://ecrolaengineering.com/assets/images/logo/02.png" alt="Ecrola Engineering Logo" className="h-12 w-auto" />
+              <img src="/images/logo/02.png" alt="Ecrola Engineering Logo" className="h-12 w-auto" />
             </a>
             <p className="text-slate-400 text-sm leading-relaxed mt-4">
               Pioneering mechanical engineering solutions with cutting-edge technology and unmatched precision.
@@ -427,7 +426,7 @@ export default function ProductsPage() {
               </a>
             </div>
           </div>
-          
+
           {/* Column 2: Quick Links */}
           <div>
             <h4 className="font-bold text-white text-lg uppercase tracking-wider mb-6">
@@ -466,7 +465,7 @@ export default function ProductsPage() {
               </li>
             </ul>
           </div>
-          
+
           {/* Column 3: Our Products */}
           <div>
             <h4 className="font-bold text-white text-lg uppercase tracking-wider mb-6">
@@ -499,7 +498,7 @@ export default function ProductsPage() {
               </li>
             </ul>
           </div>
-          
+
           {/* Column 4: Contact Info */}
           <div className="space-y-6">
             <h4 className="font-bold text-white text-lg uppercase tracking-wider mb-6">
@@ -540,7 +539,7 @@ export default function ProductsPage() {
             </div>
           </div>
         </div>
-        
+
         {/* Bottom bar */}
         <div className="border-t border-zinc-900 bg-black/40 py-8">
           <div className="max-w-7xl mx-auto px-6 md:px-20 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500 gap-4">

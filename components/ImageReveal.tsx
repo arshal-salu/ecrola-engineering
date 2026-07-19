@@ -16,7 +16,7 @@ export default function ImageReveal() {
       {/* Standard img tag (avoids Next.js server-side image fetching issues) */}
       <img
         alt="Ecorola Engineering Engineer Working"
-        src="https://ecrolaengineering.com/assets/images/about/01.jpg"
+        src="/images/01.jpg"
         className="w-full h-full object-cover"
       />
 

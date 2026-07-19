@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Outer Gear teeth -->
+  <g fill="#0f4c9c">
+    <rect x="44" y="10" width="12" height="80" rx="3" />
+    <rect x="44" y="10" width="12" height="80" rx="3" transform="rotate(30 50 50)" />
+    <rect x="44" y="10" width="12" height="80" rx="3" transform="rotate(60 50 50)" />
+    <rect x="44" y="10" width="12" height="80" rx="3" transform="rotate(90 50 50)" />
+    <rect x="44" y="10" width="12" height="80" rx="3" transform="rotate(120 50 50)" />
+    <rect x="44" y="10" width="12" height="80" rx="3" transform="rotate(150 50 50)" />
+  </g>
+  <!-- Gear Body -->
+  <circle cx="50" cy="50" r="32" fill="#0f4c9c" />
+  <!-- Inner Ring -->
+  <circle cx="50" cy="50" r="22" fill="#ffffff" />
+  <!-- Stylized E monogram with lift arrow detail in the center -->
+  <path d="M43 38 H58 V44 H49 V47 H56 V53 H49 V56 H58 V62 H43 Z" fill="#0f4c9c" />
+  <!-- Left accent dots -->
+  <circle cx="36" cy="50" r="2" fill="#0f4c9c" />
+</svg>

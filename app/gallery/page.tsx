@@ -15,32 +15,32 @@ const DEFAULT_GALLERY: GalleryItem[] = [
   {
     id: "gallery-1",
     title: "Innovative Lift Systems",
-    image_url: "https://ecrolaengineering.com/assets/images/gallary/01.jpg",
+    image_url: "/images/02.jpg",
   },
   {
     id: "gallery-2",
     title: "Advanced Customized Machinery",
-    image_url: "https://ecrolaengineering.com/assets/images/gallary/02.jpg",
+    image_url: "/images/02 (2).jpg",
   },
   {
     id: "gallery-3",
     title: "Modern Home Elevators",
-    image_url: "https://ecrolaengineering.com/assets/images/gallary/03.jpg",
+    image_url: "/images/12.jpg",
   },
   {
     id: "gallery-4",
     title: "Industrial Freight Elevators",
-    image_url: "https://ecrolaengineering.com/assets/images/gallary/04.jpg",
+    image_url: "/images/11.jpg",
   },
   {
     id: "gallery-5",
     title: "Double-Mast Stackers",
-    image_url: "https://ecrolaengineering.com/assets/images/gallary/05.jpg",
+    image_url: "/images/05.jpg",
   },
   {
     id: "gallery-6",
     title: "EOT Crane Installations",
-    image_url: "https://ecrolaengineering.com/assets/images/gallary/06.jpg",
+    image_url: "/images/06.jpg",
   },
 ];
 
@@ -92,7 +92,7 @@ export default function GalleryPage() {
         <div className="w-full flex justify-between items-center h-16 px-6 sm:px-10 md:px-12 lg:px-16 xl:px-20">
           {/* Logo */}
           <a className="flex items-center gap-2" href="/">
-            <img src="https://ecrolaengineering.com/assets/images/logo/01.svg" alt="Ecrola Engineering Logo" className="h-9 sm:h-10 w-auto" />
+            <img src="/images/logo/01.svg" alt="Ecrola Engineering Logo" className="h-9 sm:h-10 w-auto" />
           </a>
 
           {/* Desktop Nav */}
@@ -152,9 +152,8 @@ export default function GalleryPage() {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 bg-surface z-[60] flex flex-col items-center justify-center gap-8 transition-transform duration-300 lg:hidden ${
-          mobileMenuOpen ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`fixed inset-0 bg-surface z-[60] flex flex-col items-center justify-center gap-8 transition-transform duration-300 lg:hidden ${mobileMenuOpen ? "translate-x-0" : "translate-x-full"
+          }`}
         id="mobile-menu"
       >
         <button
@@ -211,7 +210,7 @@ export default function GalleryPage() {
       {/* Main Content Area */}
       <main className="pt-20">
         {/* Banner Section */}
-        <section className="relative h-[400px] md:h-[500px] bg-[#0A0A0A] flex items-center justify-center overflow-hidden">
+        <section className="relative h-[250px] sm:h-[350px] md:h-[450px] bg-[#0A0A0A] flex items-center justify-center overflow-hidden">
           <img
             src="https://static.vecteezy.com/system/resources/thumbnails/072/909/642/small/modern-elevator-with-wooden-panels-and-lights-free-photo.jpeg"
             alt="Gallery Banner"
@@ -219,7 +218,7 @@ export default function GalleryPage() {
           />
           <div className="absolute inset-0 bg-black/40" />
           <div className="relative text-center z-10 px-4">
-            <h1 className="text-5xl md:text-7xl font-extrabold uppercase text-white tracking-wider mb-4 drop-shadow-lg animate-fade-in">
+            <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-7xl font-extrabold uppercase text-white tracking-wider mb-4 drop-shadow-lg animate-fade-in">
               GALLERY
             </h1>
             <div className="flex items-center justify-center gap-2 text-sm md:text-base font-semibold text-slate-300 uppercase tracking-widest">
@@ -245,29 +244,40 @@ export default function GalleryPage() {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              {gallery.map((item, index) => (
-                <motion.div
-                  key={item.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white rounded-lg overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 group cursor-pointer"
-                >
-                  <div className="aspect-[4/3] w-full overflow-hidden relative">
-                    <img
-                      alt={item.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                      src={item.image_url}
-                    />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-lg font-bold text-gray-900 group-hover:text-primary transition-colors duration-300">
-                      {item.title}
-                    </h3>
-                  </div>
-                </motion.div>
-              ))}
+              {gallery.map((item, index) => {
+                const galleryImages = [
+                  "/images/02.jpg",
+                  "/images/02 (2).jpg",
+                  "/images/12.jpg",
+                  "/images/11.jpg",
+                  "/images/05.jpg",
+                  "/images/06.jpg"
+                ];
+                const imageUrl = galleryImages[index % galleryImages.length];
+                return (
+                  <motion.div
+                    key={item.id}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="bg-white rounded-lg overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 group cursor-pointer"
+                  >
+                    <div className="aspect-[4/3] w-full overflow-hidden relative">
+                      <img
+                        alt={item.title}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        src={imageUrl}
+                      />
+                    </div>
+                    <div className="p-6">
+                      <h3 className="text-lg font-bold text-gray-900 group-hover:text-primary transition-colors duration-300">
+                        {item.title}
+                      </h3>
+                    </div>
+                  </motion.div>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -279,7 +289,7 @@ export default function GalleryPage() {
           {/* Column 1: Logo & Tagline */}
           <div className="space-y-6">
             <a className="flex items-center gap-2" href="#">
-              <img src="https://ecrolaengineering.com/assets/images/logo/02.png" alt="Ecrola Engineering Logo" className="h-12 w-auto" />
+              <img src="/images/logo/02.png" alt="Ecrola Engineering Logo" className="h-12 w-auto" />
             </a>
             <p className="text-slate-400 text-sm leading-relaxed mt-4">
               Pioneering mechanical engineering solutions with cutting-edge technology and unmatched precision.
@@ -307,7 +317,7 @@ export default function GalleryPage() {
               </a>
             </div>
           </div>
-          
+
           {/* Column 2: Quick Links */}
           <div>
             <h4 className="font-bold text-white text-lg uppercase tracking-wider mb-6">
@@ -346,7 +356,7 @@ export default function GalleryPage() {
               </li>
             </ul>
           </div>
-          
+
           {/* Column 3: Our Products */}
           <div>
             <h4 className="font-bold text-white text-lg uppercase tracking-wider mb-6">
@@ -379,7 +389,7 @@ export default function GalleryPage() {
               </li>
             </ul>
           </div>
-          
+
           {/* Column 4: Contact Info */}
           <div className="space-y-6">
             <h4 className="font-bold text-white text-lg uppercase tracking-wider mb-6">
@@ -420,7 +430,7 @@ export default function GalleryPage() {
             </div>
           </div>
         </div>
-        
+
         {/* Bottom bar */}
         <div className="border-t border-zinc-900 bg-black/40 py-8">
           <div className="max-w-7xl mx-auto px-6 md:px-20 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500 gap-4">

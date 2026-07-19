@@ -105,7 +105,7 @@ export default function ContactPage() {
         <div className="w-full flex justify-between items-center h-16 px-6 sm:px-10 md:px-12 lg:px-16 xl:px-20">
           {/* Logo */}
           <a className="flex items-center gap-2" href="/">
-            <img src="https://ecrolaengineering.com/assets/images/logo/01.svg" alt="Ecrola Engineering Logo" className="h-9 sm:h-10 w-auto" />
+            <img src="/images/logo/01.svg" alt="Ecrola Engineering Logo" className="h-9 sm:h-10 w-auto" />
           </a>
 
           {/* Desktop Nav */}
@@ -165,9 +165,8 @@ export default function ContactPage() {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 bg-surface z-[60] flex flex-col items-center justify-center gap-8 transition-transform duration-300 lg:hidden ${
-          mobileMenuOpen ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`fixed inset-0 bg-surface z-[60] flex flex-col items-center justify-center gap-8 transition-transform duration-300 lg:hidden ${mobileMenuOpen ? "translate-x-0" : "translate-x-full"
+          }`}
         id="mobile-menu"
       >
         <button
@@ -224,7 +223,7 @@ export default function ContactPage() {
       {/* Main Content Area */}
       <main className="pt-20">
         {/* Banner Section */}
-        <section className="relative h-[400px] md:h-[500px] bg-[#0A0A0A] flex items-center justify-center overflow-hidden">
+        <section className="relative h-[250px] sm:h-[350px] md:h-[450px] bg-[#0A0A0A] flex items-center justify-center overflow-hidden">
           <img
             src="https://static.vecteezy.com/system/resources/thumbnails/072/909/642/small/modern-elevator-with-wooden-panels-and-lights-free-photo.jpeg"
             alt="Contact Banner"
@@ -232,7 +231,7 @@ export default function ContactPage() {
           />
           <div className="absolute inset-0 bg-black/40" />
           <div className="relative text-center z-10 px-4">
-            <h1 className="text-5xl md:text-7xl font-extrabold uppercase text-white tracking-wider mb-4 drop-shadow-lg">
+            <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-7xl font-extrabold uppercase text-white tracking-wider mb-4 drop-shadow-lg">
               CONTACT US
             </h1>
             <div className="flex items-center justify-center gap-2 text-sm md:text-base font-semibold text-slate-300 uppercase tracking-widest">
@@ -252,7 +251,7 @@ export default function ContactPage() {
               {/* Phone / Call Us */}
               <div className="flex flex-col items-center text-center group py-4 px-2">
                 <img
-                  src="https://ecrolaengineering.com/assets/images/contact/01.jpg"
+                  src="/images/01 (2).jpg"
                   alt="Call Us"
                   className="w-20 h-20 object-cover rounded-xl mb-5 shadow-sm group-hover:scale-105 transition-transform duration-300"
                 />
@@ -264,7 +263,7 @@ export default function ContactPage() {
               {/* Email Address */}
               <div className="flex flex-col items-center text-center group py-4 px-2">
                 <img
-                  src="https://ecrolaengineering.com/assets/images/contact/02.jpg"
+                  src="/images/02 (3).jpg"
                   alt="Email Address"
                   className="w-20 h-20 object-cover rounded-xl mb-5 shadow-sm group-hover:scale-105 transition-transform duration-300"
                 />
@@ -276,7 +275,7 @@ export default function ContactPage() {
               {/* Office Location */}
               <div className="flex flex-col items-center text-center group py-4 px-2">
                 <img
-                  src="https://ecrolaengineering.com/assets/images/contact/03.jpg"
+                  src="/images/03 (2).jpg"
                   alt="Office Location"
                   className="w-20 h-20 object-cover rounded-xl mb-5 shadow-sm group-hover:scale-105 transition-transform duration-300"
                 />
@@ -295,7 +294,7 @@ export default function ContactPage() {
               {/* Left Side: Image */}
               <div className="relative rounded-lg overflow-hidden min-h-[400px] lg:min-h-full shadow-2xl">
                 <img
-                  src="https://ecrolaengineering.com/assets/images/appoinment/02.jpg"
+                  src="/images/02 (1).jpg"
                   alt="Make An Appointment"
                   className="absolute inset-0 w-full h-full object-cover"
                   loading="lazy"
@@ -317,11 +316,10 @@ export default function ContactPage() {
                   <form className="grid grid-cols-1 md:grid-cols-2 gap-6" onSubmit={handleSubmit}>
                     {formStatus.type && (
                       <div
-                        className={`col-span-1 md:col-span-2 p-4 rounded-lg font-semibold text-sm ${
-                          formStatus.type === "success"
+                        className={`col-span-1 md:col-span-2 p-4 rounded-lg font-semibold text-sm ${formStatus.type === "success"
                             ? "bg-green-50 text-green-800 border border-green-200"
                             : "bg-red-50 text-red-800 border border-red-200"
-                        }`}
+                          }`}
                       >
                         {formStatus.message}
                       </div>
@@ -466,7 +464,7 @@ export default function ContactPage() {
           {/* Column 1: Logo & Tagline */}
           <div className="space-y-6">
             <a href="/">
-              <img src="https://ecrolaengineering.com/assets/images/logo/01.svg" alt="Ecrola Engineering Logo" className="h-10 w-auto filter brightness-0 invert" />
+              <img src="/images/logo/02.png" alt="Ecrola Engineering Logo" className="h-12 w-auto" />
             </a>
             <p className="font-body-md text-slate-400">
               Pioneering mechanical engineering solutions with cutting-edge technology and unmatched precision.

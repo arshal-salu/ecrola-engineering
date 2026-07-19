@@ -89,6 +89,11 @@
   --animate-bounce: bounce 1s infinite;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   background: var(--color-background);
   color: var(--color-on-background);
@@ -131,7 +136,7 @@ body {
   display: flex;
   gap: 16px;
   transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-  transform: translateX(calc(-1 * var(--carousel-index) * (100% + 16px)));
+  transform: translateX(calc(-1 * var(--carousel-index) * 100%));
 }
 
 @media (min-width: 640px) {

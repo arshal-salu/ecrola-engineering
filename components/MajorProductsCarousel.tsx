@@ -11,10 +11,10 @@ interface ProductItem {
 }
 
 const baseProducts: ProductItem[] = [
-  { id: "1", name: "EOT Crane", image: "https://ecrolaengineering.com/assets/images/project/11.jpg" },
-  { id: "2", name: "Safe Lockers", image: "https://ecrolaengineering.com/assets/images/project/12.jpg" },
-  { id: "3", name: "Home Elevator", image: "https://ecrolaengineering.com/assets/images/project/03.jpg" },
-  { id: "4", name: "Advanced Machinery", image: "https://ecrolaengineering.com/assets/images/project/13.jpg" },
+  { id: "1", name: "EOT Crane", image: "/images/11.jpg" },
+  { id: "2", name: "Safe Lockers", image: "/images/12.jpg" },
+  { id: "3", name: "Home Elevator", image: "/images/03 (1).jpg" },
+  { id: "4", name: "Advanced Machinery", image: "/images/13.jpg" },
 ];
 
 // Clone first 3 items to the end for smooth infinite loop

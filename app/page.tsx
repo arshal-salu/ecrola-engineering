@@ -283,7 +283,7 @@ ${formData.message}
       >
         <div className="w-full flex justify-between items-center h-16 px-6 sm:px-10 md:px-12 lg:px-16 xl:px-20">
           <a className="flex items-center gap-2" href="#">
-            <img src="https://ecrolaengineering.com/assets/images/logo/01.svg" alt="Ecrola Engineering Logo" className="h-9 sm:h-10 w-auto" />
+            <img src="/images/logo/01.svg" alt="Ecrola Engineering Logo" className="h-9 sm:h-10 w-auto" />
           </a>
 
           {/* Menu items and button grouped together on the right */}
@@ -485,16 +485,16 @@ ${formData.message}
             <span className="font-semibold text-[16px] leading-[24px] tracking-[0.1em] text-[#0f4c9c] uppercase block">
               Our Speciality
             </span>
-            <h2 className="font-bold text-[40px] leading-[61px] text-[#0C0A0A] uppercase mt-[5px]">
+            <h2 className="font-bold text-2xl sm:text-3xl md:text-[40px] leading-snug md:leading-[61px] text-[#0C0A0A] uppercase mt-[5px]">
               Exceptional Lift & Machinery Solutions
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
             {products.map((product, index) => {
               const projectImages = [
-                "https://ecrolaengineering.com/assets/images/project/01.jpg",
-                "https://ecrolaengineering.com/assets/images/project/02.jpg",
-                "https://ecrolaengineering.com/assets/images/project/03.jpg",
+                "/images/01 (1).jpg",
+                "/images/02.jpg",
+                "/images/03 (1).jpg",
               ];
               const projectNames = [
                 "Innovative Lift Systems",
@@ -738,7 +738,7 @@ ${formData.message}
             {/* Left Side: Image */}
             <div className="relative rounded-lg overflow-hidden min-h-[400px] lg:min-h-full shadow-2xl">
               <img
-                src="https://ecrolaengineering.com/assets/images/appoinment/02.jpg"
+                src="/images/02 (1).jpg"
                 alt="Make An Appointment"
                 className="absolute inset-0 w-full h-full object-cover"
                 loading="lazy"
@@ -881,7 +881,7 @@ ${formData.message}
           {/* Column 1: Logo & Tagline */}
           <div className="space-y-6">
             <a className="flex items-center gap-2" href="#">
-              <img src="https://ecrolaengineering.com/assets/images/logo/02.png" alt="Ecrola Engineering Logo" className="h-12 w-auto" />
+              <img src="/images/logo/02.png" alt="Ecrola Engineering Logo" className="h-12 w-auto" />
             </a>
             <p className="text-slate-400 text-sm leading-relaxed mt-4">
               Pioneering mechanical engineering solutions with cutting-edge technology and unmatched precision.
