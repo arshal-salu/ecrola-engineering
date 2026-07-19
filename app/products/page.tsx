@@ -284,7 +284,7 @@ export default function ProductsPage() {
         </section>
 
         {/* Global Services Section */}
-        <section className="bg-gray-50 pt-0 pb-28 px-4 sm:px-8">
+        <section className="bg-gray-50 pt-0 pb-28 px-6 md:px-20 lg:px-24 overflow-hidden">
             <div className="max-w-7xl mx-auto bg-white p-6 sm:p-10 md:p-16 rounded-2xl shadow-sm border border-gray-100">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
 
