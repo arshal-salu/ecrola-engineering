@@ -14,17 +14,17 @@ const slides: Slide[] = [
   {
     heading: "INNOVATION IS THE SPARK THAT SETS PROGRESS IN MOTION",
     subtext: "ECROLA Engineering Excellence in Machine Manufacturing, Shaping the Future with Innovation and Quality",
-    image: "/images/01.jpg",
+    image: "https://img.freepik.com/premium-photo/piece-paper-with-gears-gears-it_1034303-453189.jpg",
   },
   {
     heading: "DESIGN, BUILD, TEST, REPEAT: THE PATH TO PERFECTION",
     subtext: "Our quality and relentless innovation with machines, ECR Group delivers customized solutions, elevating industries across the world",
-    image: "/images/02.jpg",
+    image: "https://thumbs.dreamstime.com/b/technical-blueprint-robot-arm-mechanical-details-futuristic-design-elements-ideal-showcasing-engineering-327721785.jpg",
   },
   {
     heading: "PIONEERING PRECISION IN MACHINE MANUFACTURING",
     subtext: "ECROLA Engineering Delivering Efficiency, Reliability, and Unmatched Industrial Expertise Worldwide",
-    image: "/images/03.jpg",
+    image: "https://as2.ftcdn.net/v2/jpg/07/12/73/43/1000_F_712734300_l86HY1dfL6WxCd7re6GtGmlYnxsYjdbd.jpg",
   },
 ];
 

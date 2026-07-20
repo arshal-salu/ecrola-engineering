@@ -72,9 +72,7 @@ export default function GalleryPage() {
       try {
         const { data, error } = await supabase.from("gallery").select("*");
         if (error) throw error;
-        if (data && data.length > 0) {
-          setGallery(data);
-        }
+        setGallery(data || []);
       } catch (err) {
         console.error("Error fetching gallery:", err);
       }
@@ -243,42 +241,53 @@ export default function GalleryPage() {
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              {gallery.map((item, index) => {
-                const galleryImages = [
-                  "/images/02.jpg",
-                  "/images/02 (2).jpg",
-                  "/images/12.jpg",
-                  "/images/11.jpg",
-                  "/images/05.jpg",
-                  "/images/06.jpg"
-                ];
-                const imageUrl = galleryImages[index % galleryImages.length];
-                return (
-                  <motion.div
-                    key={item.id}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="bg-white rounded-lg overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 group cursor-pointer"
-                  >
-                    <div className="aspect-[4/3] w-full overflow-hidden relative">
-                      <img
-                        alt={item.title}
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                        src={imageUrl}
-                      />
-                    </div>
-                    <div className="p-6">
-                      <h3 className="text-lg font-bold text-gray-900 group-hover:text-primary transition-colors duration-300">
-                        {item.title}
-                      </h3>
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </div>
+            {gallery.length === 0 ? (
+              <div className="text-center py-16 bg-white border border-gray-100 rounded-lg shadow-sm p-8 max-w-lg mx-auto flex flex-col items-center">
+                <span className="material-symbols-outlined text-5xl text-blue-600 mb-4">photo_library</span>
+                <h3 className="font-bold text-xl text-gray-900 uppercase tracking-wider mb-2">No Gallery Photos</h3>
+                <p className="text-gray-500 text-sm mb-6 text-center max-w-xs">Our gallery photos are currently being updated. Please check back later or explore other sections.</p>
+                <a href="/" className="inline-block bg-primary text-white px-6 py-2.5 rounded font-label-md uppercase tracking-wider text-xs active:scale-95 transition-all duration-200">
+                  Back to Home
+                </a>
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                {gallery.map((item, index) => {
+                  const galleryImages = [
+                    "/images/02.jpg",
+                    "/images/02 (2).jpg",
+                    "/images/12.jpg",
+                    "/images/11.jpg",
+                    "/images/05.jpg",
+                    "/images/06.jpg"
+                  ];
+                  const imageUrl = item.image_url || galleryImages[index % galleryImages.length];
+                  return (
+                    <motion.div
+                      key={item.id}
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      className="bg-white rounded-lg overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 group cursor-pointer"
+                    >
+                      <div className="aspect-[4/3] w-full overflow-hidden relative">
+                        <img
+                          alt={item.title}
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          src={imageUrl}
+                        />
+                      </div>
+                      <div className="p-6">
+                        <h3 className="text-lg font-bold text-gray-900 group-hover:text-primary transition-colors duration-300">
+                          {item.title}
+                        </h3>
+                      </div>
+                    </motion.div>
+                  );
+                })}
+              </div>
+            )}
           </div>
         </section>
       </main>

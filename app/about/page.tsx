@@ -323,7 +323,7 @@ export default function AboutPage() {
                 className="w-full aspect-square relative rounded-lg overflow-hidden shadow-2xl group"
               >
                 <img
-                  src="/images/13.jpg"
+                  src="https://ecrolaengineering.com/assets/images/service/13.jpg"
                   alt="Why Choose Ecrola"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
