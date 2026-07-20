@@ -194,7 +194,9 @@ export default function Page() {
           .select("*");
 
         if (productsError) throw productsError;
-        setProducts(fetchedProducts || []);
+        if (fetchedProducts && fetchedProducts.length > 0) {
+          setProducts(fetchedProducts);
+        }
 
         // Fetch gallery
         const { data: fetchedGallery, error: galleryError } = await supabase
@@ -202,7 +204,9 @@ export default function Page() {
           .select("*");
 
         if (galleryError) throw galleryError;
-        setGallery(fetchedGallery || []);
+        if (fetchedGallery && fetchedGallery.length > 0) {
+          setGallery(fetchedGallery);
+        }
       } catch (err: any) {
         console.error("Error fetching data:", err);
       } finally {
@@ -485,74 +489,63 @@ ${formData.message}
               Exceptional Lift & Machinery Solutions
             </h2>
           </div>
-          {products.length === 0 ? (
-            <div className="text-center py-16 bg-white border border-slate-200 rounded-lg shadow-sm p-8 max-w-lg mx-auto flex flex-col items-center">
-              <span className="material-symbols-outlined text-5xl text-blue-600 mb-4">inventory_2</span>
-              <h3 className="font-bold text-xl text-gray-900 uppercase tracking-wider mb-2">No Products Available</h3>
-              <p className="text-gray-500 text-sm mb-6 text-center max-w-xs">Our product catalog is currently being updated. Please contact us directly for inquiries.</p>
-              <a href="/contact" className="inline-block bg-primary text-white px-6 py-2.5 rounded font-label-md uppercase tracking-wider text-xs active:scale-95 transition-all duration-200">
-                Contact Us
-              </a>
-            </div>
-          ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
-              {products.map((product, index) => {
-                const projectImages = [
-                  "/images/01 (1).jpg",
-                  "/images/02.jpg",
-                  "/images/03 (1).jpg",
-                ];
-                const projectNames = [
-                  "Innovative Lift Systems",
-                  "Advanced Machinery",
-                  "Custom Home Elevators",
-                ];
-                const projectDescriptions = [
-                  "High-performance elevators designed for optimal functionality and modern aesthetics",
-                  "Durable machinery tailored to meet the highest standards in industrial environments.",
-                  "Bespoke home lift systems blending innovation, safety, and personalized design.",
-                ];
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+            {products.map((product, index) => {
+              const projectImages = [
+                "/images/01 (1).jpg",
+                "/images/02.jpg",
+                "/images/03 (1).jpg",
+              ];
+              const projectNames = [
+                "Innovative Lift Systems",
+                "Advanced Machinery",
+                "Custom Home Elevators",
+              ];
+              const projectDescriptions = [
+                "High-performance elevators designed for optimal functionality and modern aesthetics",
+                "Durable machinery tailored to meet the highest standards in industrial environments.",
+                "Bespoke home lift systems blending innovation, safety, and personalized design.",
+              ];
 
-                const imageUrl = product.image_url || projectImages[index % projectImages.length];
-                const displayName = product.name || projectNames[index % projectNames.length];
-                const displayDesc = product.description || projectDescriptions[index % projectDescriptions.length];
-                const displayNumber = String(index + 1).padStart(2, "0");
+              const imageUrl = projectImages[index % projectImages.length];
+              const displayName = projectNames[index % projectNames.length];
+              const displayDesc = projectDescriptions[index % projectDescriptions.length];
+              const displayNumber = String(index + 1).padStart(2, "0");
 
-                return (
-                  <div
-                    key={product.id}
-                    className="bg-white border border-slate-200 overflow-hidden group transition-all duration-300"
-                  >
-                    <a href="/products" className="relative block aspect-square overflow-hidden bg-slate-50">
-                      <img
-                        alt={displayName}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        src={imageUrl}
-                      />
-                      {/* Blue background number corner badge */}
-                      <div className="absolute top-4 left-4 bg-[#0f4c9c] text-white text-xs font-bold px-2.5 py-1 rounded-sm shadow-md z-10">
-                        {displayNumber}
-                      </div>
-                    </a>
-                    <div className="p-8">
-                      <h3 className="font-bold text-2xl text-[#0C0A0A] group-hover:text-[#0f4c9c] transition-colors duration-300 mb-3">
-                        <a href="/products">{displayName}</a>
-                      </h3>
-                      <p className="text-on-surface-variant font-body-md text-body-md mb-6 min-h-[48px]">
-                        {displayDesc}
-                      </p>
-                      <a
-                        href="/products"
-                        className="inline-block bg-primary text-white px-6 py-2 rounded-DEFAULT font-label-md uppercase tracking-wider text-center active:scale-95 transition-all duration-200 btn-slide-up"
-                      >
-                        VIEW SERVICE
-                      </a>
+              return (
+                <div
+                  key={product.id}
+                  className="bg-white border border-slate-200 overflow-hidden group transition-all duration-300"
+                >
+                  <a href="/products" className="relative block aspect-square overflow-hidden bg-slate-50">
+                    <img
+                      alt={displayName}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      src={imageUrl}
+                    />
+                    {/* Blue background number corner badge */}
+                    <div className="absolute top-4 left-4 bg-[#0f4c9c] text-white text-xs font-bold px-2.5 py-1 rounded-sm shadow-md z-10">
+                      {displayNumber}
                     </div>
+                  </a>
+                  <div className="p-8">
+                    <h3 className="font-bold text-2xl text-[#0C0A0A] group-hover:text-[#0f4c9c] transition-colors duration-300 mb-3">
+                      <a href="/products">{displayName}</a>
+                    </h3>
+                    <p className="text-on-surface-variant font-body-md text-body-md mb-6 min-h-[48px]">
+                      {displayDesc}
+                    </p>
+                    <a
+                      href="/products"
+                      className="inline-block bg-primary text-white px-6 py-2 rounded-DEFAULT font-label-md uppercase tracking-wider text-center active:scale-95 transition-all duration-200 btn-slide-up"
+                    >
+                      VIEW SERVICE
+                    </a>
                   </div>
-                );
-              })}
-            </div>
-          )}
+                </div>
+              );
+            })}
+          </div>
         </div>
       </section>
 
