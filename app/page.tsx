@@ -29,19 +29,19 @@ const DEFAULT_PRODUCTS: Product[] = [
     id: "default-1",
     name: "High-Precision Turbines",
     description: "Aerospace grade components designed for maximum efficiency and thermal resistance in extreme conditions.",
-    image_url: "https://ecrolaengineering.com/assets/images/project/01.jpg",
+    image_url: "/images/01.jpg",
   },
   {
     id: "default-2",
     name: "Automated Robotics",
     description: "State-of-the-art manufacturing automation solutions including robotic arms and integrated control systems.",
-    image_url: "https://ecrolaengineering.com/assets/images/project/02.jpg",
+    image_url: "/images/02.jpg",
   },
   {
     id: "default-3",
     name: "Industrial Valve Systems",
     description: "Heavy-duty fluid control systems engineered for harsh chemical and high-pressure subsea environments.",
-    image_url: "https://ecrolaengineering.com/assets/images/project/03.jpg",
+    image_url: "/images/03.jpg",
   },
 ];
 

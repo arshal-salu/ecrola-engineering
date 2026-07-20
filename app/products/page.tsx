@@ -13,22 +13,22 @@ interface ProductItem {
 const PRODUCTS_DATA: ProductItem[] = [
   {
     name: "Home Elevator / Lift",
-    image: "https://ecrolaengineering.com/assets/images/project/03.jpg",
+    image: "/images/03.jpg",
     description: "Bespoke home lift systems blending innovation, safety, and personalized design to elevate modern living."
   },
   {
     name: "Advanced Customized Machinery",
-    image: "https://ecrolaengineering.com/assets/images/project/13.jpg",
+    image: "/images/13.jpg",
     description: "Tailored industrial machinery solutions engineered for optimal performance, durability, and customized workflows."
   },
   {
     name: "EOT Crane Solutions",
-    image: "https://ecrolaengineering.com/assets/images/project/11.jpg",
+    image: "/images/11.jpg",
     description: "Efficient and reliable overhead traveling cranes designed for heavy-duty material handling and warehouse operations."
   },
   {
     name: "Safe Lockers",
-    image: "https://ecrolaengineering.com/assets/images/project/12.jpg",
+    image: "/images/12.jpg",
     description: "State-of-the-art secure safe lockers built with robust materials to protect your assets and valuables."
   },
 ];
