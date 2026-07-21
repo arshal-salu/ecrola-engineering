@@ -6,6 +6,7 @@
 }
 
 @theme {
+  --breakpoint-lg: 1024px;
   --color-outline-variant: #c5c5d3;
   --color-on-error-container: #410002;
   --color-secondary: #505f76;
@@ -163,4 +164,23 @@ body {
   /* IE and Edge */
   scrollbar-width: none;
   /* Firefox */
+}
+
+/* Custom Scrollable Mobile Menu */
+.mobile-menu-custom {
+  position: fixed;
+  inset: 0;
+  background-color: var(--color-surface);
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  padding-top: 6rem;
+  padding-bottom: 3rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  overflow-y: auto;
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
