@@ -165,7 +165,8 @@ export default function ContactPage() {
 
       {/* Mobile Menu */}
       <div
-        className={`mobile-menu-custom lg:hidden ${mobileMenuOpen ? "translate-x-0" : "translate-x-full"}`}
+        className={`fixed inset-0 bg-surface z-[60] flex flex-col items-center justify-start gap-6 pt-24 pb-12 overflow-y-auto transition-transform duration-300 lg:hidden ${mobileMenuOpen ? "translate-x-0" : "translate-x-full"
+          }`}
         id="mobile-menu"
       >
         <button
