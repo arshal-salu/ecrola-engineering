@@ -724,7 +724,6 @@ ${formData.message}
             src="https://th.bing.com/th/id/R.a4c7f55872c9f55a1bd8d81b7f97debc?rik=APR%2bbr%2fznI9cSA&riu=http%3a%2f%2fwww.level10.com.au%2fassets%2fclient%2fimages%2fbanner%2fbanner-level10.jpg&ehk=H1Gb60rAsP0%2f5oimqNtNAJJVKhq1rLdSoAdugcNSe%2bE%3d&risl=&pid=ImgRaw&r=0"
             alt="Latest Projects Excellence"
             className="absolute inset-0 w-full h-full object-cover"
-            loading="lazy"
           />
           {/* Overlay to blend with the black section on mobile */}
           <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-[#0C0A0A] via-transparent to-transparent opacity-60 lg:opacity-80" />
@@ -741,7 +740,6 @@ ${formData.message}
                 src="/images/02 (1).jpg"
                 alt="Make An Appointment"
                 className="absolute inset-0 w-full h-full object-cover"
-                loading="lazy"
               />
             </div>
 

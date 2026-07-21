@@ -297,7 +297,6 @@ export default function ContactPage() {
                   src="/images/02 (1).jpg"
                   alt="Make An Appointment"
                   className="absolute inset-0 w-full h-full object-cover"
-                  loading="lazy"
                 />
               </div>
 

@@ -226,7 +226,6 @@ export default function AboutPage() {
                     src="/images/04.jpg"
                     alt="Lift & Machinery Experts"
                     className="w-full h-auto object-cover"
-                    loading="lazy"
                   />
                 </div>
                 {/* ECROLA Profile Button */}
@@ -326,7 +325,6 @@ export default function AboutPage() {
                   src="https://ecrolaengineering.com/assets/images/service/13.jpg"
                   alt="Why Choose Ecrola"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  loading="lazy"
                 />
                 {/* Diagonal stripes and gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-transparent" />
@@ -471,7 +469,6 @@ export default function AboutPage() {
                     src={service.image}
                     alt={service.title}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    loading="lazy"
                   />
                   {/* Default subtle bottom dark gradient overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent transition-opacity duration-300 group-hover:opacity-0" />
