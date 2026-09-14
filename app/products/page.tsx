@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Settings, Users, Package, Flag, Award, CheckCircle2, Briefcase, Calendar, ChevronRight, Phone, Mail, MapPin, Check, ChevronLeft } from "lucide-react";
+import { Settings, Users, Package, Flag, Award, CheckCircle2, Briefcase, Calendar, ChevronRight, Phone, Mail, MapPin, Check, ChevronLeft, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface ProductItem {
@@ -117,7 +117,7 @@ export default function ProductsPage() {
               onClick={() => setMobileMenuOpen(true)}
               aria-label="Open menu"
             >
-              <span className="material-symbols-outlined">menu</span>
+              <Menu className="w-6 h-6 text-primary" />
             </button>
           </div>
         </div>
@@ -134,7 +134,7 @@ export default function ProductsPage() {
           onClick={() => setMobileMenuOpen(false)}
           aria-label="Close menu"
         >
-          <span className="material-symbols-outlined">close</span>
+          <X className="w-6 h-6 text-primary" />
         </button>
         <a
           className="text-2xl font-bold text-secondary hover:text-primary transition-colors"

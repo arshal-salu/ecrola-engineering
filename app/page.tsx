@@ -8,7 +8,7 @@ import BlackOverlayCard from "@/components/BlackOverlayCard";
 import ImageReveal from "@/components/ImageReveal";
 import MajorProductsCarousel from "@/components/MajorProductsCarousel";
 import HeroCarousel from "@/components/HeroCarousel";
-import { Settings, Users, Package, Flag, Award, CheckCircle, CheckCircle2, Briefcase, Calendar, ChevronRight, Phone, Mail, MapPin } from "lucide-react";
+import { Settings, Users, Package, Flag, Award, CheckCircle, CheckCircle2, Briefcase, Calendar, ChevronRight, Phone, Mail, MapPin, Menu, X } from "lucide-react";
 
 interface Product {
   id: string;
@@ -335,7 +335,7 @@ ${formData.message}
               onClick={() => setMobileMenuOpen(true)}
               aria-label="Open menu"
             >
-              <span className="material-symbols-outlined">menu</span>
+              <Menu className="w-6 h-6 text-primary" />
             </button>
           </div>
         </div>
@@ -352,7 +352,7 @@ ${formData.message}
           onClick={() => setMobileMenuOpen(false)}
           aria-label="Close menu"
         >
-          <span className="material-symbols-outlined">close</span>
+          <X className="w-6 h-6 text-primary" />
         </button>
         <a
           className="text-2xl font-bold text-primary"
