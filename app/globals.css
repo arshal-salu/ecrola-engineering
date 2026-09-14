@@ -1,7 +1,4 @@
 @import "tailwindcss";
-@source "..";
-@source "../app/**/*.{js,ts,jsx,tsx}";
-@source "../components/**/*.{js,ts,jsx,tsx}";
 
 :root {
   --background: #eceded;

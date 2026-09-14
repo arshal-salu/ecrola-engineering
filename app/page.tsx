@@ -404,9 +404,9 @@ ${formData.message}
       {/* About Section */}
       <section className="py-12 md:py-16 lg:py-20 bg-white overflow-hidden" id="about">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-20">
-          <div className="grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-8 sm:gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 sm:gap-12 items-center">
             {/* Left Column - Image with Overlay (60% width) */}
-            <div className="order-1 lg:order-1 w-full">
+            <div className="order-1 lg:order-1 w-full lg:col-span-3">
               <ImageReveal />
             </div>
 
@@ -416,12 +416,12 @@ ${formData.message}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="order-2 lg:order-2"
+              className="order-2 lg:order-2 lg:col-span-2"
             >
               <span className="text-blue-500 text-sm font-semibold tracking-widest block uppercase">
                 ABOUT US
               </span>
-              <h2 className="font-bold text-2xl sm:text-3xl lg:text-[40px] leading-tight sm:leading-[50px] text-[#0C0A0A] uppercase mt-[5px] flex flex-col">
+              <h2 className="font-bold text-2xl sm:text-3xl lg:text-4xl leading-tight text-[#0C0A0A] uppercase mt-[5px] flex flex-col">
                 <span className="block">EXCELLENCE IN EVERY</span>
                 <span className="block">ENGINEERING PROJECT</span>
               </h2>
@@ -434,8 +434,7 @@ ${formData.message}
                 {/* Left side stat */}
                 <div className="flex flex-col min-w-[100px] sm:min-w-[120px]">
                   <span
-                    className="text-4xl sm:text-5xl font-bold leading-none"
-                    style={{ color: "lab(28 21.42 -65.74)" }}
+                    className="text-4xl sm:text-5xl font-bold leading-none text-[#00236f]"
                   >
                     2017
                   </span>
@@ -456,8 +455,7 @@ ${formData.message}
                       className="flex items-center gap-3 bg-white p-0"
                     >
                       <CheckCircle
-                        className="w-5 h-5 flex-shrink-0"
-                        style={{ color: "lab(28 21.42 -65.74)" }}
+                        className="w-5 h-5 flex-shrink-0 text-[#00236f]"
                       />
                       <span className="text-gray-700 text-sm sm:text-base font-medium">{text}</span>
                     </div>
