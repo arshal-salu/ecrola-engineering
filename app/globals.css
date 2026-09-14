@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@source "../app/**/*.{js,ts,jsx,tsx}";
+@source "../components/**/*.{js,ts,jsx,tsx}";
 
 :root {
   --background: #eceded;
@@ -40,25 +42,19 @@
   --color-on-surface: #191c1e;
   --color-on-background: #191c1e;
   --color-on-secondary-container: #d9e3f9;
-  --color-on-[#0C0A0A]: #ffffff;
   --color-error-container: #410002;
   --color-inverse-surface: #2e3133;
   --color-error: #ffb4ab;
   --color-on-secondary-fixed-variant: #39475d;
-  --color-on-[#0f4c9c]: #ffffff;
   --color-surface-container-low: #f1f4f6;
   --color-on-error: #690005;
   --color-primary-fixed: #dbe2ff;
-  --color-[#0f4c9c]: #0f4c9c;
   --color-shadow: #000000;
   --color-primary: #00236f;
-  --color-[#0C0A0A]: #0c0a0a;
   --color-on-primary: #ffffff;
   --color-secondary-container: #39475d;
   --color-surface-variant: #444651;
   --color-sc-rim: #757682;
-  --color-[#0f4c9c]-container: #1e3a8a;
-  --color-[#0C0A0A]-container: #191c1e;
   --color-tertiary-fixed-open-container: #4b1c00;
 
   --radius-DEFAULT: 0.125rem;
