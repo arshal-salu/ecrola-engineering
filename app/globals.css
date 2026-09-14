@@ -83,17 +83,25 @@
   --animate-bounce: bounce 1s infinite;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html,
 body {
   width: 100%;
-  max-width: 100%;
+  max-width: 100vw;
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
-body {
-  background: var(--color-background);
-  color: var(--color-on-background);
-  font-family: var(--font-body-md);
+img,
+video,
+svg {
+  max-width: 100%;
 }
 
 .hero-gradient {

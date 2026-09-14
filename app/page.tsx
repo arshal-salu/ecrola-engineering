@@ -646,20 +646,20 @@ ${formData.message}
       {/* Latest Projects / Stats Section */}
       <section className="relative overflow-hidden flex flex-col lg:flex-row min-h-[500px] sm:min-h-[600px]" id="latest-projects">
         {/* Left Side: 60% Width, Black Background */}
-        <div className="w-full lg:w-[60%] bg-[#0C0A0A] py-12 sm:py-16 lg:py-20 px-4 sm:px-8 md:px-20 flex flex-col justify-center z-10">
+        <div className="w-full lg:w-3/5 bg-[#0C0A0A] py-12 sm:py-16 lg:py-20 px-4 sm:px-6 md:px-10 lg:px-12 flex flex-col justify-center z-10">
           <div className="w-full">
             {/* Header */}
             <div className="mb-8 sm:mb-12">
               <span className="text-blue-500 text-sm font-semibold uppercase tracking-wider block mb-2">
                 LATEST PROJECTS
               </span>
-              <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white leading-tight uppercase">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight uppercase">
                 EXCELLENCE DRIVEN FOR GETTING UNRIVALED RESULTS.
               </h2>
             </div>
 
-            {/* Grid of 4 Blue Boxes (Single Row on Desktop) */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mt-8 sm:mt-10">
+            {/* Grid of 4 Blue Boxes (2x2 on Mobile/Tablet, 4-col on XL screens) */}
+            <div className="grid grid-cols-2 sm:grid-cols-2 xl:grid-cols-4 gap-3 sm:gap-4 mt-8 sm:mt-10">
               {[
                 {
                   value: "8",
@@ -689,24 +689,24 @@ ${formData.message}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: idx * 0.1 }}
-                    className="group bg-[#0f4c9c] hover:bg-blue-600 transition-all duration-300 rounded-xl p-6 md:p-8 flex flex-col items-center justify-center text-center shadow-xl h-full min-h-[220px]"
+                    className="group bg-[#0f4c9c] hover:bg-blue-600 transition-all duration-300 rounded-xl p-4 sm:p-5 flex flex-col items-center justify-center text-center shadow-xl h-full min-h-[180px] sm:min-h-[200px]"
                   >
                     {/* Centered SVG Icon Container */}
-                    <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-white/15 backdrop-blur-md border border-white/20 flex items-center justify-center shadow-inner mb-5 group-hover:scale-110 group-hover:bg-white/25 transition-all duration-300">
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-white/15 backdrop-blur-md border border-white/20 flex items-center justify-center shadow-inner mb-3 sm:mb-4 group-hover:scale-110 group-hover:bg-white/25 transition-all duration-300">
                       <img
                         src={box.iconUrl}
                         alt={box.label}
-                        className="w-10 h-10 md:w-12 md:h-12 object-contain filter brightness-0 invert transition-all duration-300"
+                        className="w-7 h-7 sm:w-8 sm:h-8 object-contain filter brightness-0 invert transition-all duration-300"
                       />
                     </div>
 
                     {/* Centered Counter Value */}
-                    <div className="text-4xl md:text-5xl font-black text-white leading-none mb-3">
+                    <div className="text-3xl sm:text-4xl font-black text-white leading-none mb-2">
                       <Counter value={parseInt(box.value)} />+
                     </div>
 
                     {/* Centered Label */}
-                    <div className="text-xs md:text-sm font-bold text-blue-100 uppercase tracking-wide leading-snug">
+                    <div className="text-[11px] sm:text-xs font-bold text-blue-100 uppercase tracking-wide leading-snug">
                       {box.label}
                     </div>
                   </motion.div>

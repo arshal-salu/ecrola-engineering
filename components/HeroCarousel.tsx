@@ -106,7 +106,7 @@ export default function HeroCarousel() {
       </div>
 
       {/* Main Content Container */}
-      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-10 md:px-20 lg:px-24 xl:px-28 py-12 sm:py-24 w-full">
+      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16 py-16 sm:py-24 w-full">
         <div className="max-w-3xl">
           <motion.span
             initial={{ opacity: 0, y: 20 }}
