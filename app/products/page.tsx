@@ -62,7 +62,7 @@ export default function ProductsPage() {
         className="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl border-b border-white/30 shadow-md transition-all duration-300"
         id="main-nav"
       >
-        <div className="w-full flex justify-between items-center h-16 px-6 sm:px-10 md:px-12 lg:px-16 xl:px-20">
+        <div className="w-full flex justify-between items-center h-16 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20">
           {/* Logo */}
           <a className="flex items-center gap-2" href="/">
             <img src="/images/logo/01.svg" alt="Ecrola Engineering Logo" className="h-9 sm:h-10 w-auto" />
@@ -183,7 +183,7 @@ export default function ProductsPage() {
       {/* Main Content Area */}
       <main className="pt-20">
         {/* Banner Section */}
-        <section className="relative h-[250px] sm:h-[350px] md:h-[450px] bg-[#0A0A0A] flex items-center justify-center overflow-hidden">
+        <section className="relative h-[220px] sm:h-[350px] md:h-[450px] bg-[#0A0A0A] flex items-center justify-center overflow-hidden">
           <img
             src="https://static.vecteezy.com/system/resources/thumbnails/072/909/642/small/modern-elevator-with-wooden-panels-and-lights-free-photo.jpeg"
             alt="Products Banner"
@@ -191,10 +191,10 @@ export default function ProductsPage() {
           />
           <div className="absolute inset-0 bg-black/40" />
           <div className="relative text-center z-10 px-4">
-            <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-7xl font-extrabold uppercase text-white tracking-wider mb-4 drop-shadow-lg animate-fade-in">
+            <h1 className="text-2xl xs:text-3xl sm:text-5xl md:text-7xl font-extrabold uppercase text-white tracking-wider mb-3 sm:mb-4 drop-shadow-lg animate-fade-in">
               PRODUCTS
             </h1>
-            <div className="flex items-center justify-center gap-2 text-sm md:text-base font-semibold text-slate-300 uppercase tracking-widest">
+            <div className="flex items-center justify-center gap-2 text-xs sm:text-sm md:text-base font-semibold text-slate-300 uppercase tracking-widest">
               <a href="/" className="hover:text-white transition-colors">
                 Home
               </a>
@@ -211,12 +211,12 @@ export default function ProductsPage() {
               <span className="text-blue-500 text-sm font-semibold text-center block mb-2 uppercase tracking-widest">
                 Our Products
               </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 text-center">
                 Explore Our Valuable Products
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {[0, 1, 2, 3, 4].map((index) => {
                 const projectImages = [
                   "/images/01 (1).jpg",
@@ -284,9 +284,9 @@ export default function ProductsPage() {
         </section>
 
         {/* Global Services Section */}
-        <section className="bg-gray-50 pt-0 pb-28 px-6 md:px-20 lg:px-24 overflow-hidden">
-          <div className="max-w-7xl mx-auto bg-white p-6 sm:p-10 md:p-16 rounded-2xl shadow-sm border border-gray-100">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <section className="bg-gray-50 py-12 sm:py-16 md:py-20 lg:pb-28 px-4 sm:px-8 md:px-20 lg:px-24 overflow-hidden">
+          <div className="max-w-7xl mx-auto bg-white p-4 sm:p-10 md:p-16 rounded-2xl shadow-sm border border-gray-100">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-16 items-center">
 
               <div className="flex flex-col">
                 {/* Header */}
@@ -394,7 +394,7 @@ export default function ProductsPage() {
 
       {/* Footer */}
       <footer className="bg-[#0C0A0A] border-t border-zinc-900 text-slate-300">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 px-6 md:px-20 py-20 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 px-4 sm:px-8 md:px-20 py-12 sm:py-16 md:py-20 max-w-7xl mx-auto">
           {/* Column 1: Logo & Tagline */}
           <div className="space-y-6">
             <a className="flex items-center gap-2" href="#">
@@ -542,7 +542,7 @@ export default function ProductsPage() {
 
         {/* Bottom bar */}
         <div className="border-t border-zinc-900 bg-black/40 py-8">
-          <div className="max-w-7xl mx-auto px-6 md:px-20 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+          <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-20 flex flex-col sm:flex-row justify-between items-center text-center sm:text-left text-xs text-slate-500 gap-4">
             <div>
               © 2024 Ecrola Engineering. All rights reserved.
             </div>

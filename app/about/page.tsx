@@ -73,7 +73,7 @@ export default function AboutPage() {
         className="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl border-b border-white/30 shadow-md transition-all duration-300"
         id="main-nav"
       >
-        <div className="w-full flex justify-between items-center h-16 px-6 sm:px-10 md:px-12 lg:px-16 xl:px-20">
+        <div className="w-full flex justify-between items-center h-16 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20">
           {/* Logo */}
           <a className="flex items-center gap-2" href="/">
             <img src="/images/logo/01.svg" alt="Ecrola Engineering Logo" className="h-9 sm:h-10 w-auto" />
@@ -194,7 +194,7 @@ export default function AboutPage() {
       {/* Main Content Area */}
       <main className="pt-20">
         {/* Banner Section */}
-        <section className="relative h-[250px] sm:h-[350px] md:h-[450px] bg-[#0A0A0A] flex items-center justify-center overflow-hidden">
+        <section className="relative h-[220px] sm:h-[350px] md:h-[450px] bg-[#0A0A0A] flex items-center justify-center overflow-hidden">
           <img
             src="https://static.vecteezy.com/system/resources/thumbnails/072/909/642/small/modern-elevator-with-wooden-panels-and-lights-free-photo.jpeg"
             alt="About Us Banner"
@@ -202,10 +202,10 @@ export default function AboutPage() {
           />
           <div className="absolute inset-0 bg-black/40" />
           <div className="relative text-center z-10 px-4">
-            <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-7xl font-extrabold uppercase text-white tracking-wider mb-4 drop-shadow-lg animate-fade-in">
+            <h1 className="text-2xl xs:text-3xl sm:text-5xl md:text-7xl font-extrabold uppercase text-white tracking-wider mb-3 sm:mb-4 drop-shadow-lg animate-fade-in">
               About Us
             </h1>
-            <div className="flex items-center justify-center gap-2 text-sm md:text-base font-semibold text-slate-300 uppercase tracking-widest">
+            <div className="flex items-center justify-center gap-2 text-xs sm:text-sm md:text-base font-semibold text-slate-300 uppercase tracking-widest">
               <a href="/" className="hover:text-white transition-colors">
                 Home
               </a>
@@ -216,9 +216,9 @@ export default function AboutPage() {
         </section>
 
         {/* Overview Section */}
-        <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-6 md:px-20">
-            <div className="flex flex-col lg:flex-row gap-12 items-start">
+        <section className="py-12 sm:py-16 md:py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-20">
+            <div className="flex flex-col lg:flex-row gap-8 sm:gap-12 items-start">
               {/* Left Column: 40% Width Image & Button */}
               <div className="w-full lg:w-[40%] flex flex-col gap-6">
                 <div className="rounded-lg overflow-hidden shadow-2xl">
@@ -310,8 +310,8 @@ export default function AboutPage() {
         </section>
 
         {/* Why Choose Us Section */}
-        <section className="py-20 bg-[#1a1f2e] relative overflow-hidden">
-          <div className="max-w-7xl mx-auto px-6 md:px-20 relative z-10">
+        <section className="py-12 sm:py-16 md:py-20 bg-[#1a1f2e] relative overflow-hidden">
+          <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-20 relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               {/* Left Column: 50% Width Image Container */}
               <motion.div
@@ -418,8 +418,8 @@ export default function AboutPage() {
         </section>
 
         {/* Our Service Section */}
-        <section className="py-20 bg-white relative">
-          <div className="max-w-7xl mx-auto px-6 md:px-20 relative z-10">
+        <section className="py-12 sm:py-16 md:py-20 bg-white relative">
+          <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-20 relative z-10">
             {/* Headers */}
             <div className="mb-12">
               <h1
@@ -442,7 +442,7 @@ export default function AboutPage() {
             </div>
 
             {/* Service Cards Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {[
                 {
                   title: "Safe Lockers",
@@ -499,7 +499,7 @@ export default function AboutPage() {
         </section>
 
         {/* Fun Facts Section */}
-        <section className="py-20 bg-[#0C0A0A] px-6 md:px-20 relative">
+        <section className="py-12 sm:py-16 md:py-20 bg-[#0C0A0A] px-4 sm:px-8 md:px-20 relative">
           <div className="max-w-7xl mx-auto relative z-10">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
@@ -550,7 +550,7 @@ export default function AboutPage() {
 
       {/* Footer */}
       <footer className="bg-[#0C0A0A] border-t border-zinc-900 text-slate-300">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 px-6 md:px-20 py-20 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 px-4 sm:px-8 md:px-20 py-12 sm:py-16 md:py-20 max-w-7xl mx-auto">
           {/* Column 1: Logo & Tagline */}
           <div className="space-y-6">
             <a className="flex items-center gap-2" href="#">
@@ -698,7 +698,7 @@ export default function AboutPage() {
 
         {/* Bottom bar */}
         <div className="border-t border-zinc-900 bg-black/40 py-8">
-          <div className="max-w-7xl mx-auto px-6 md:px-20 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+          <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-20 flex flex-col sm:flex-row justify-between items-center text-center sm:text-left text-xs text-slate-500 gap-4">
             <div>
               © 2024 Ecrola Engineering. All rights reserved.
             </div>

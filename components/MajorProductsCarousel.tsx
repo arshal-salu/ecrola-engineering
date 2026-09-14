@@ -113,7 +113,7 @@ export default function MajorProductsCarousel() {
             {products.map((product) => (
               <div
                 key={product.id}
-                className="min-w-[calc(100%-1rem)] sm:min-w-[calc(50%-0.5rem)] lg:min-w-[calc(33.333%-0.75rem)] h-[280px] md:h-[320px] rounded-lg overflow-hidden relative group cursor-pointer flex-shrink-0 bg-gray-200"
+                className="min-w-full sm:min-w-[calc(50%-0.5rem)] lg:min-w-[calc(33.333%-0.75rem)] h-[280px] md:h-[320px] rounded-lg overflow-hidden relative group cursor-pointer flex-shrink-0 bg-gray-200"
               >
                 {/* Edge-to-Edge Image */}
                 <img

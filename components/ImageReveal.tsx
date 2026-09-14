@@ -11,7 +11,7 @@ export default function ImageReveal() {
   return (
     <div
       ref={containerRef}
-      className="relative overflow-hidden rounded-lg w-full h-[400px] md:h-[600px] bg-slate-100"
+      className="relative overflow-hidden rounded-lg w-full h-[300px] xs:h-[380px] md:h-[600px] bg-slate-100"
     >
       {/* Standard img tag (avoids Next.js server-side image fetching issues) */}
       <img
@@ -33,7 +33,7 @@ export default function ImageReveal() {
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
-        className="absolute bottom-0 left-0 bg-black/90 p-6 z-20 max-w-sm border-t border-r border-slate-800 rounded-tr-lg"
+        className="absolute bottom-0 left-0 bg-black/90 p-4 sm:p-6 z-20 max-w-[calc(100%-1rem)] sm:max-w-sm border-t border-r border-slate-800 rounded-tr-lg"
       >
         <p className="text-[#eceded] text-base md:text-lg font-medium leading-relaxed">
           Leading Innovators in Lift &amp; Machinery Manufacturing

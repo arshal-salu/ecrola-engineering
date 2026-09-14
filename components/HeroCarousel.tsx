@@ -106,18 +106,18 @@ export default function HeroCarousel() {
       </div>
 
       {/* Main Content Container */}
-      <div className="relative z-20 max-w-7xl mx-auto px-6 sm:px-10 md:px-20 lg:px-24 xl:px-28 py-16 sm:py-24 w-full">
+      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-10 md:px-20 lg:px-24 xl:px-28 py-12 sm:py-24 w-full">
         <div className="max-w-3xl">
           <motion.span
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-blue-400 text-xs sm:text-sm tracking-[0.25em] font-bold uppercase mb-4 block"
+            className="text-blue-400 text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.25em] font-bold uppercase mb-3 sm:mb-4 block"
           >
             WELCOME TO ECROLA ENGINEERING
           </motion.span>
 
-          <div className="min-h-[140px] sm:min-h-[180px] flex flex-col justify-center my-2">
+          <div className="min-h-[120px] sm:min-h-[180px] flex flex-col justify-center my-2">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentSlide}
@@ -126,10 +126,10 @@ export default function HeroCarousel() {
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
               >
-                <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white uppercase leading-[1.1] tracking-tight drop-shadow-md">
+                <h1 className="text-xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white uppercase leading-[1.15] tracking-tight drop-shadow-md break-words">
                   {slides[currentSlide].heading}
                 </h1>
-                <p className="text-slate-300 text-xs sm:text-base md:text-lg mt-4 max-w-2xl leading-relaxed font-normal">
+                <p className="text-slate-300 text-xs sm:text-base md:text-lg mt-3 sm:mt-4 max-w-2xl leading-relaxed font-normal">
                   {slides[currentSlide].subtext}
                 </p>
               </motion.div>
@@ -137,16 +137,16 @@ export default function HeroCarousel() {
           </div>
 
           {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mt-6 sm:mt-10">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mt-6 sm:mt-10">
             <a
               href="/contact"
-              className="w-full sm:w-auto bg-black/40 backdrop-blur-md text-white border border-white/30 hover:bg-black hover:border-blue-500 px-8 py-4 rounded-md font-bold text-xs sm:text-sm uppercase tracking-wider text-center active:scale-95 transition-all duration-300 shadow-lg"
+              className="w-full sm:w-auto bg-black/40 backdrop-blur-md text-white border border-white/30 hover:bg-black hover:border-blue-500 px-6 sm:px-8 py-3.5 sm:py-4 rounded-md font-bold text-xs sm:text-sm uppercase tracking-wider text-center active:scale-95 transition-all duration-300 shadow-lg"
             >
               ABOUT US
             </a>
             <a
               href="/contact"
-              className="w-full sm:w-auto bg-black/40 backdrop-blur-md text-white border border-white/30 hover:bg-black hover:border-blue-500 px-8 py-4 rounded-md font-bold text-xs sm:text-sm uppercase tracking-wider text-center active:scale-95 transition-all duration-300 shadow-lg"
+              className="w-full sm:w-auto bg-black/40 backdrop-blur-md text-white border border-white/30 hover:bg-black hover:border-blue-500 px-6 sm:px-8 py-3.5 sm:py-4 rounded-md font-bold text-xs sm:text-sm uppercase tracking-wider text-center active:scale-95 transition-all duration-300 shadow-lg"
             >
               CONTACT US
             </a>
@@ -158,7 +158,7 @@ export default function HeroCarousel() {
       <button
         onClick={prevSlide}
         aria-label="Previous Slide"
-        className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black/40 hover:bg-blue-600 border border-white/20 text-white flex items-center justify-center transition-all duration-300 backdrop-blur-sm group"
+        className="hidden sm:flex absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black/40 hover:bg-blue-600 border border-white/20 text-white items-center justify-center transition-all duration-300 backdrop-blur-sm group"
       >
         <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 group-hover:-translate-x-0.5 transition-transform" />
       </button>
@@ -166,7 +166,7 @@ export default function HeroCarousel() {
       <button
         onClick={nextSlide}
         aria-label="Next Slide"
-        className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black/40 hover:bg-blue-600 border border-white/20 text-white flex items-center justify-center transition-all duration-300 backdrop-blur-sm group"
+        className="hidden sm:flex absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black/40 hover:bg-blue-600 border border-white/20 text-white items-center justify-center transition-all duration-300 backdrop-blur-sm group"
       >
         <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-0.5 transition-transform" />
       </button>

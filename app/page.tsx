@@ -281,7 +281,7 @@ ${formData.message}
         className="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl border-b border-white/30 shadow-md transition-all duration-300"
         id="main-nav"
       >
-        <div className="w-full flex justify-between items-center h-16 px-6 sm:px-10 md:px-12 lg:px-16 xl:px-20">
+        <div className="w-full flex justify-between items-center h-16 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20">
           <a className="flex items-center gap-2" href="#">
             <img src="/images/logo/01.svg" alt="Ecrola Engineering Logo" className="h-9 sm:h-10 w-auto" />
           </a>
@@ -404,7 +404,7 @@ ${formData.message}
       {/* About Section */}
       <section className="py-12 md:py-16 lg:py-20 bg-white overflow-hidden" id="about">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-20">
-          <div className="grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-8 sm:gap-12 items-center">
             {/* Left Column - Image with Overlay (60% width) */}
             <div className="order-1 lg:order-1 w-full">
               <ImageReveal />
@@ -421,18 +421,18 @@ ${formData.message}
               <span className="text-blue-500 text-sm font-semibold tracking-widest block uppercase">
                 ABOUT US
               </span>
-              <h2 className="font-bold text-3xl sm:text-[40px] leading-tight sm:leading-[50px] text-[#0C0A0A] uppercase mt-[5px] flex flex-col">
-                <span className="block sm:whitespace-nowrap">EXCELLENCE IN EVERY</span>
-                <span className="block sm:whitespace-nowrap">ENGINEERING PROJECT</span>
+              <h2 className="font-bold text-2xl sm:text-3xl lg:text-[40px] leading-tight sm:leading-[50px] text-[#0C0A0A] uppercase mt-[5px] flex flex-col">
+                <span className="block">EXCELLENCE IN EVERY</span>
+                <span className="block">ENGINEERING PROJECT</span>
               </h2>
-              <p className="text-gray-500 mt-4 text-base leading-relaxed">
+              <p className="text-gray-500 mt-4 text-sm sm:text-base leading-relaxed">
                 At Ecorola Engineering, we specialize in innovative lift solutions, custom machinery, and cutting-edge production facilities to transform spaces across commercial, industrial, and residential sectors.
               </p>
 
               {/* Stats Section */}
-              <div className="flex flex-row gap-6 items-start flex-wrap mt-7 pt-6 border-t border-gray-100">
+              <div className="flex flex-col sm:flex-row gap-6 items-start flex-wrap mt-7 pt-6 border-t border-gray-100">
                 {/* Left side stat */}
-                <div className="flex flex-col min-w-[120px]">
+                <div className="flex flex-col min-w-[100px] sm:min-w-[120px]">
                   <span
                     className="text-4xl sm:text-5xl font-bold leading-none"
                     style={{ color: "lab(28 21.42 -65.74)" }}
@@ -445,7 +445,7 @@ ${formData.message}
                 </div>
 
                 {/* Right side points */}
-                <div className="flex flex-col gap-3.5 flex-1 min-w-[200px]">
+                <div className="flex flex-col gap-3.5 flex-1 min-w-0">
                   {[
                     "Reliable solutions anytime",
                     "Service for 8 years",
@@ -489,7 +489,7 @@ ${formData.message}
               Exceptional Lift & Machinery Solutions
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-gutter">
             {products.map((product, index) => {
               const projectImages = [
                 "/images/01 (1).jpg",
@@ -554,7 +554,7 @@ ${formData.message}
 
       {/* Work Process Section */}
       <motion.section
-        className="bg-white py-20 px-6 md:px-20 overflow-hidden"
+        className="bg-white py-12 sm:py-16 lg:py-20 px-4 sm:px-8 md:px-20 overflow-hidden"
         id="process"
         initial="hidden"
         whileInView="visible"
@@ -646,22 +646,22 @@ ${formData.message}
       </motion.section>
 
       {/* Latest Projects / Stats Section */}
-      <section className="relative overflow-hidden flex flex-col lg:flex-row min-h-[600px]" id="latest-projects">
+      <section className="relative overflow-hidden flex flex-col lg:flex-row min-h-[500px] sm:min-h-[600px]" id="latest-projects">
         {/* Left Side: 60% Width, Black Background */}
-        <div className="w-full lg:w-[60%] bg-[#0C0A0A] py-20 px-6 md:px-20 flex flex-col justify-center z-10">
+        <div className="w-full lg:w-[60%] bg-[#0C0A0A] py-12 sm:py-16 lg:py-20 px-4 sm:px-8 md:px-20 flex flex-col justify-center z-10">
           <div className="w-full">
             {/* Header */}
-            <div className="mb-12">
+            <div className="mb-8 sm:mb-12">
               <span className="text-blue-500 text-sm font-semibold uppercase tracking-wider block mb-2">
                 LATEST PROJECTS
               </span>
-              <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight uppercase">
+              <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white leading-tight uppercase">
                 EXCELLENCE DRIVEN FOR GETTING UNRIVALED RESULTS.
               </h2>
             </div>
 
             {/* Grid of 4 Blue Boxes (Single Row on Desktop) */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mt-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mt-8 sm:mt-10">
               {[
                 {
                   value: "8",
@@ -731,11 +731,11 @@ ${formData.message}
       </section>
 
       {/* Contact Section */}
-      <section className="py-24 bg-[#ffffff] text-gray-900" id="contact">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+      <section className="py-12 sm:py-16 lg:py-24 bg-[#ffffff] text-gray-900" id="contact">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-stretch">
             {/* Left Side: Image */}
-            <div className="relative rounded-lg overflow-hidden min-h-[400px] lg:min-h-full shadow-2xl">
+            <div className="relative rounded-lg overflow-hidden min-h-[240px] sm:min-h-[350px] lg:min-h-full shadow-2xl">
               <img
                 src="/images/02 (1).jpg"
                 alt="Make An Appointment"
@@ -745,16 +745,16 @@ ${formData.message}
 
             {/* Right Side: Form & Header */}
             <div>
-              <div className="mb-8">
+              <div className="mb-6 sm:mb-8">
                 <span className="text-blue-600 text-sm font-semibold uppercase tracking-wider block">
                   Let’s Discuss About Projects
                 </span>
-                <h2 className="text-3xl md:text-5xl font-extrabold uppercase mt-2 text-gray-900">
+                <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold uppercase mt-2 text-gray-900">
                   Make An Appointment
                 </h2>
               </div>
 
-              <div className="bg-gray-50 border border-gray-200 p-8 md:p-10 rounded-lg text-gray-900 shadow-2xl">
+              <div className="bg-gray-50 border border-gray-200 p-4 sm:p-8 md:p-10 rounded-lg text-gray-900 shadow-2xl">
                 <form className="grid grid-cols-1 md:grid-cols-2 gap-6" onSubmit={handleSubmit}>
                   {formStatus.type && (
                     <div
@@ -875,7 +875,7 @@ ${formData.message}
 
       {/* Footer */}
       <footer className="bg-[#0C0A0A] border-t border-zinc-900 text-slate-300">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 px-6 md:px-20 py-20 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 px-4 sm:px-8 md:px-20 py-12 sm:py-16 md:py-20 max-w-7xl mx-auto">
           {/* Column 1: Logo & Tagline */}
           <div className="space-y-6">
             <a className="flex items-center gap-2" href="#">
@@ -1023,7 +1023,7 @@ ${formData.message}
 
         {/* Bottom bar */}
         <div className="border-t border-zinc-900 bg-black/40 py-8">
-          <div className="max-w-7xl mx-auto px-6 md:px-20 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+          <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-20 flex flex-col sm:flex-row justify-between items-center text-center sm:text-left text-xs text-slate-500 gap-4">
             <div>
               © 2024 Ecrola Engineering. All rights reserved. &bull; <a href="/admin" className="hover:text-blue-400 transition-colors">Admin Portal</a>
             </div>

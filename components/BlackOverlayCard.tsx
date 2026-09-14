@@ -20,7 +20,7 @@ export default function BlackOverlayCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="absolute bottom-0 left-0 bg-black/90 backdrop-blur-sm p-6 md:p-8 w-[90%] sm:w-full max-w-sm z-30 border-t border-r border-slate-800 rounded-tr-lg rounded-br-lg"
+      className="absolute bottom-0 left-0 bg-black/90 backdrop-blur-sm p-4 sm:p-6 md:p-8 w-[90%] sm:w-full max-w-[calc(100%-1rem)] sm:max-w-sm z-30 border-t border-r border-slate-800 rounded-tr-lg rounded-br-lg"
     >
       <p className="text-[#eceded] text-base md:text-lg font-medium leading-relaxed">
         {title}

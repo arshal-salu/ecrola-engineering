@@ -184,12 +184,12 @@ export default function AdminPage() {
   if (!isAuthenticated) {
     return (
       <main className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-slate-100 p-4">
-        <div className="max-w-md w-full bg-white rounded-2xl shadow-xl border border-gray-100 p-8 md:p-10">
+        <div className="max-w-md w-full bg-white rounded-2xl shadow-xl border border-gray-100 p-6 sm:p-8 md:p-10">
           <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center mb-6 mx-auto">
             <Lock className="w-8 h-8 text-blue-600" />
           </div>
 
-          <h1 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-2 tracking-wide whitespace-nowrap">
+          <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 text-center mb-2 tracking-wide">
             ADMIN PORTAL
           </h1>
 
@@ -290,7 +290,7 @@ export default function AdminPage() {
         )}
 
         {/* Tab Navigation Buttons */}
-        <div className="flex gap-2 sm:gap-4 mb-8 overflow-x-auto pb-2">
+        <div className="flex gap-2 sm:gap-4 mb-8 overflow-x-auto pb-2 whitespace-nowrap">
           <button
             onClick={() => setActiveTab("contacts")}
             className={`flex items-center gap-2.5 px-6 py-3 rounded-xl text-xs sm:text-sm font-bold uppercase tracking-wider transition-all cursor-pointer ${

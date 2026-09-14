@@ -102,7 +102,7 @@ export default function ContactPage() {
         className="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl border-b border-white/30 shadow-md transition-all duration-300"
         id="main-nav"
       >
-        <div className="w-full flex justify-between items-center h-16 px-6 sm:px-10 md:px-12 lg:px-16 xl:px-20">
+        <div className="w-full flex justify-between items-center h-16 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20">
           {/* Logo */}
           <a className="flex items-center gap-2" href="/">
             <img src="/images/logo/01.svg" alt="Ecrola Engineering Logo" className="h-9 sm:h-10 w-auto" />
@@ -223,7 +223,7 @@ export default function ContactPage() {
       {/* Main Content Area */}
       <main className="pt-20">
         {/* Banner Section */}
-        <section className="relative h-[250px] sm:h-[350px] md:h-[450px] bg-[#0A0A0A] flex items-center justify-center overflow-hidden">
+        <section className="relative h-[220px] sm:h-[350px] md:h-[450px] bg-[#0A0A0A] flex items-center justify-center overflow-hidden">
           <img
             src="https://static.vecteezy.com/system/resources/thumbnails/072/909/642/small/modern-elevator-with-wooden-panels-and-lights-free-photo.jpeg"
             alt="Contact Banner"
@@ -231,10 +231,10 @@ export default function ContactPage() {
           />
           <div className="absolute inset-0 bg-black/40" />
           <div className="relative text-center z-10 px-4">
-            <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-7xl font-extrabold uppercase text-white tracking-wider mb-4 drop-shadow-lg">
+            <h1 className="text-2xl xs:text-3xl sm:text-5xl md:text-7xl font-extrabold uppercase text-white tracking-wider mb-3 sm:mb-4 drop-shadow-lg">
               CONTACT US
             </h1>
-            <div className="flex items-center justify-center gap-2 text-sm md:text-base font-semibold text-slate-300 uppercase tracking-widest">
+            <div className="flex items-center justify-center gap-2 text-xs sm:text-sm md:text-base font-semibold text-slate-300 uppercase tracking-widest">
               <a href="/" className="hover:text-white transition-colors">
                 Home
               </a>
@@ -245,8 +245,8 @@ export default function ContactPage() {
         </section>
 
         {/* Contact Info Cards */}
-        <section className="py-24 bg-gray-50 border-b border-gray-200">
-          <div className="max-w-7xl mx-auto px-6 md:px-12">
+        <section className="py-12 sm:py-16 md:py-24 bg-gray-50 border-b border-gray-200">
+          <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-12">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Phone / Call Us */}
               <div className="flex flex-col items-center text-center group py-4 px-2">
@@ -288,11 +288,11 @@ export default function ContactPage() {
         </section>
 
         {/* Contact Form Section */}
-        <section className="py-24 bg-[#ffffff] text-gray-900">
-          <div className="max-w-7xl mx-auto px-6 md:px-12">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+        <section className="py-12 sm:py-16 md:py-24 bg-[#ffffff] text-gray-900">
+          <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-stretch">
               {/* Left Side: Image */}
-              <div className="relative rounded-lg overflow-hidden min-h-[400px] lg:min-h-full shadow-2xl">
+              <div className="relative rounded-lg overflow-hidden min-h-[240px] sm:min-h-[350px] lg:min-h-full shadow-2xl">
                 <img
                   src="/images/02 (1).jpg"
                   alt="Make An Appointment"
@@ -302,16 +302,16 @@ export default function ContactPage() {
 
               {/* Right Side: Form & Header */}
               <div>
-                <div className="mb-8">
+                <div className="mb-6 sm:mb-8">
                   <span className="text-blue-600 text-sm font-semibold uppercase tracking-wider block">
                     Let’s Discuss About Projects
                   </span>
-                  <h2 className="text-3xl md:text-5xl font-extrabold uppercase mt-2 text-gray-900">
+                  <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold uppercase mt-2 text-gray-900">
                     Make An Appointment
                   </h2>
                 </div>
 
-                <div className="bg-gray-50 border border-gray-200 p-8 md:p-10 rounded-lg text-gray-900 shadow-2xl">
+                <div className="bg-gray-50 border border-gray-200 p-4 sm:p-8 md:p-10 rounded-lg text-gray-900 shadow-2xl">
                   <form className="grid grid-cols-1 md:grid-cols-2 gap-6" onSubmit={handleSubmit}>
                     {formStatus.type && (
                       <div
@@ -431,17 +431,17 @@ export default function ContactPage() {
         </section>
 
         {/* Google Map Location Section */}
-        <section className="py-24 bg-gray-50 border-t border-gray-100">
-          <div className="max-w-7xl mx-auto px-6 md:px-12">
+        <section className="py-12 sm:py-16 md:py-24 bg-gray-50 border-t border-gray-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-12">
             <div className="mb-8 text-center">
               <span className="text-blue-600 text-sm font-semibold uppercase tracking-wider block">
                 Find Us On The Map
               </span>
-              <h2 className="text-3xl md:text-4xl font-extrabold uppercase mt-2 text-gray-900">
+              <h2 className="text-2xl sm:text-4xl font-extrabold uppercase mt-2 text-gray-900">
                 Our Location
               </h2>
             </div>
-            <div className="w-full h-[450px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl border border-gray-200">
+            <div className="w-full h-[300px] sm:h-[450px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl border border-gray-200">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3913.1849838091516!2d75.83147697377986!3d11.247798588931051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba65b5c94b8f995%3A0x4357529d9b0a5170!2sHiLITE%20Business%20Park%2C%20near%20Tower%202%2C%20Poovangal%2C%20Pantheeramkavu%2C%20Kerala%20673014!5e0!3m2!1sen!2sin!4v1782545582209!5m2!1sen!2sin"
                 width="100%"
@@ -459,7 +459,7 @@ export default function ContactPage() {
 
       {/* Footer */}
       <footer className="bg-[#0C0A0A] border-t border-zinc-900 text-slate-300">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 px-6 md:px-20 py-20 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 px-4 sm:px-8 md:px-20 py-12 sm:py-16 md:py-20 max-w-7xl mx-auto">
           {/* Column 1: Logo & Tagline */}
           <div className="space-y-6">
             <a href="/">

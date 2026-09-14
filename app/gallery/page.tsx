@@ -89,7 +89,7 @@ export default function GalleryPage() {
         className="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl border-b border-white/30 shadow-md transition-all duration-300"
         id="main-nav"
       >
-        <div className="w-full flex justify-between items-center h-16 px-6 sm:px-10 md:px-12 lg:px-16 xl:px-20">
+        <div className="w-full flex justify-between items-center h-16 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20">
           {/* Logo */}
           <a className="flex items-center gap-2" href="/">
             <img src="/images/logo/01.svg" alt="Ecrola Engineering Logo" className="h-9 sm:h-10 w-auto" />
@@ -210,7 +210,7 @@ export default function GalleryPage() {
       {/* Main Content Area */}
       <main className="pt-20">
         {/* Banner Section */}
-        <section className="relative h-[250px] sm:h-[350px] md:h-[450px] bg-[#0A0A0A] flex items-center justify-center overflow-hidden">
+        <section className="relative h-[220px] sm:h-[350px] md:h-[450px] bg-[#0A0A0A] flex items-center justify-center overflow-hidden">
           <img
             src="https://static.vecteezy.com/system/resources/thumbnails/072/909/642/small/modern-elevator-with-wooden-panels-and-lights-free-photo.jpeg"
             alt="Gallery Banner"
@@ -218,10 +218,10 @@ export default function GalleryPage() {
           />
           <div className="absolute inset-0 bg-black/40" />
           <div className="relative text-center z-10 px-4">
-            <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-7xl font-extrabold uppercase text-white tracking-wider mb-4 drop-shadow-lg animate-fade-in">
+            <h1 className="text-2xl xs:text-3xl sm:text-5xl md:text-7xl font-extrabold uppercase text-white tracking-wider mb-3 sm:mb-4 drop-shadow-lg animate-fade-in">
               GALLERY
             </h1>
-            <div className="flex items-center justify-center gap-2 text-sm md:text-base font-semibold text-slate-300 uppercase tracking-widest">
+            <div className="flex items-center justify-center gap-2 text-xs sm:text-sm md:text-base font-semibold text-slate-300 uppercase tracking-widest">
               <a href="/" className="hover:text-white transition-colors">
                 Home
               </a>
@@ -232,18 +232,18 @@ export default function GalleryPage() {
         </section>
 
         {/* Gallery Grid Section */}
-        <section className="py-20 bg-gray-50 px-6 md:px-20">
+        <section className="py-12 sm:py-16 md:py-20 bg-gray-50 px-4 sm:px-8 md:px-20">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <span className="text-blue-500 text-sm font-semibold text-center block mb-2 uppercase tracking-widest animate-fade-in">
                 Our Gallery
               </span>
-              <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 text-center uppercase tracking-wide">
+              <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 text-center uppercase tracking-wide">
                 Discover Elevated Elegance
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {gallery.map((item, index) => {
                 const galleryImages = [
                   "/images/02.jpg",
@@ -285,7 +285,7 @@ export default function GalleryPage() {
 
       {/* Footer */}
       <footer className="bg-[#0C0A0A] border-t border-zinc-900 text-slate-300">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 px-6 md:px-20 py-20 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 px-4 sm:px-8 md:px-20 py-12 sm:py-16 md:py-20 max-w-7xl mx-auto">
           {/* Column 1: Logo & Tagline */}
           <div className="space-y-6">
             <a className="flex items-center gap-2" href="#">
@@ -433,7 +433,7 @@ export default function GalleryPage() {
 
         {/* Bottom bar */}
         <div className="border-t border-zinc-900 bg-black/40 py-8">
-          <div className="max-w-7xl mx-auto px-6 md:px-20 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+          <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-20 flex flex-col sm:flex-row justify-between items-center text-center sm:text-left text-xs text-slate-500 gap-4">
             <div>
               © 2024 Ecrola Engineering. All rights reserved.
             </div>

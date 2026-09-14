@@ -60,16 +60,16 @@ export default function AppointmentForm() {
   };
 
   return (
-    <div className="w-full max-w-2xl mx-auto bg-white rounded-2xl shadow-xl border border-gray-100 p-6 sm:p-8 md:p-10">
+    <div className="w-full max-w-2xl mx-auto bg-white rounded-2xl shadow-xl border border-gray-100 p-4 sm:p-8 md:p-10">
       {/* Header Section */}
-      <div className="mb-8 text-center">
+      <div className="mb-6 sm:mb-8 text-center">
         <span className="text-[#25D366] text-xs font-bold uppercase tracking-widest block mb-1">
           Instant WhatsApp Booking
         </span>
-        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 uppercase">
+        <h2 className="text-xl sm:text-3xl font-bold text-gray-900 uppercase">
           Make An Appointment
         </h2>
-        <p className="text-gray-500 text-sm mt-2">
+        <p className="text-gray-500 text-xs sm:text-sm mt-2">
           Fill in your details below to instantly connect with our engineering team on WhatsApp.
         </p>
       </div>

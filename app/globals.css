@@ -91,6 +91,7 @@
 
 html,
 body {
+  width: 100%;
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -137,7 +138,7 @@ body {
   display: flex;
   gap: 16px;
   transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-  transform: translateX(calc(-1 * var(--carousel-index) * 100%));
+  transform: translateX(calc(-1 * var(--carousel-index) * (100% + 16px)));
 }
 
 @media (min-width: 640px) {
